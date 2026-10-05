@@ -84,8 +84,9 @@ Hold changed code to all four. When they conflict, state the trade-off.
   patterns from another ecosystem. Prefer the standard library and platform
   constructs already in use.
 - **Performant:** Avoid needless allocation, repeated work, and avoidable I/O.
-  Start independent async work concurrently and await it late. Match data
-  structures to access patterns.
+  Run independent work concurrently when it serves the workload, with explicit
+  ownership, resource limits, and completion handling. Match data structures to
+  access patterns.
 - **Scalable:** Check behavior as input, data volume, and concurrency grow.
   Look for accidental quadratic scans, unbounded caches and buffers, N+1
   queries, missing pagination or backpressure, and unsafe shared state.
