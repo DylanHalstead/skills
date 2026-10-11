@@ -2,9 +2,8 @@
 
 Keep APIs synchronous by default so callers own concurrency. Use channels for
 ownership transfer, work distribution, or asynchronous results; use mutexes for
-shared-state invariants. Choose the simplest expression of the contract, not a
-blanket channels-over-locks rule. Prefer a map plus a mutex over `sync.Map` unless
-its specialized access patterns fit. Typed atomics suit independent values, not
+shared-state invariants. Prefer a map plus a mutex over `sync.Map` unless its
+specialized access patterns fit. Typed atomics suit independent values, not
 invariants spanning fields.
 
 Use a `sync.WaitGroup` to wait; prefer `WaitGroup.Go` on Go 1.25+ for scoped tasks

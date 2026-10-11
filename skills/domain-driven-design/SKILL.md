@@ -78,7 +78,3 @@ such as authentication, email, and payments when practical.
 5. Which external models need translation at the boundary?
 6. Which events represent facts other parts of the domain care about?
 7. Is this the core domain, or are we over-modeling a generic capability?
-
-Prefer the smallest model that protects the real invariants. Skip aggregates,
-repositories, factories, and events that add names without hiding complexity or
-expressing a business rule.
