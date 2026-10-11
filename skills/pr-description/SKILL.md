@@ -83,10 +83,14 @@ Include an item only when it changes how someone should assess or use the change
 - meaningful validation when its result changes confidence in risky behavior
 
 Use screenshots for visual behavior and before/after examples for changed
-contracts. For a large code or system architecture change, use a concise text
-visual or Mermaid diagram when it explains the structure, dependencies, or flow
-more clearly than prose. Fit the visual into the repository template when one
-exists. Do not add an artifact because a template or habit suggests one.
+contracts. In **What**, add one compact structural view only when it makes a
+changed dependency, control flow, data flow, state boundary, or architecture
+easier to understand than prose and the diff. Prefer a call tree, data flow, or
+architecture diagram. Use a component tree or contract/type shape only when it
+shows ownership the diff does not; use a focused `diff` block only for a changed
+relationship. Omit visuals for localized, mechanical, configuration-only, or
+self-evident changes. Keep the view beside the prose it supports and do not add
+a generic heading.
 
 ## Cut aggressively
 
