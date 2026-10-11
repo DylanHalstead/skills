@@ -7,9 +7,10 @@ Bind testify to the subtest's `t` when installed: `require` for prerequisites,
 `assert` for independent comparisons. Prefer small fakes or injected transports
 to introducing a mock framework.
 
-This example tests `ReadName(io.Reader)`, an API that decodes a JSON object's
-`name` field and preserves read-error identity. Imports: `errors`, `io`, `strings`,
-`testing`, and `testing/iotest`.
+This example tests `ReadName(io.Reader)`, which decodes a JSON object's `name`
+field and preserves read-error identity. Its `setup` functions create fresh
+readers for each case. Imports: `errors`, `io`, `strings`, `testing`, and
+`testing/iotest`.
 
 ```go
 func TestReadName(t *testing.T) {
