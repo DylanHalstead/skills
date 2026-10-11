@@ -31,16 +31,24 @@ or runtime control. If the agent already succeeds without added guidance, consid
 whether a skill offers enough value to justify maintaining it.
 
 For an existing skill, inspect its references, scripts, and callers before
-changing shared behavior. Preserve unrelated content.
+changing shared behavior. Preserve unrelated content. When reviewing a skill or
+comparing packages, read [the review guide](references/review.md) before judging
+boundaries, instruction quality, or proposed changes.
 
 Proceed when the task, boundaries, source of expertise, and success criteria are
 clear. Do not invent domain rules to fill gaps.
 
 ## 2. Define the skill's contract
 
-Give the skill one coherent capability. Create separate skills for tasks that
-should activate independently. Move optional detail into references within the
-same skill.
+Give the skill one coherent capability. Create separate skills when each has
+its own useful requests, activation conditions, and result. Use references for
+conditional detail that serves the same capability and does not need independent
+discovery. A shared subject or frequent co-use does not require a merge; a
+separate file does not, by itself, justify a separate skill.
+
+For related skills, name the owner of each concern and the conditions for loading
+companions. Keep workflow, specialist judgment, and environment-wide rules in
+their appropriate owners instead of repeating them across packages.
 
 Write a concise frontmatter `description` stating what the skill does and when
 the user needs it. Use user-intent language and distinct trigger cases. Keep the
@@ -74,6 +82,12 @@ and caveats together. Move branch-specific detail out when it obscures the core
 workflow. Aim below 500 lines and 5,000 tokens; these are ceilings to stay below,
 not targets to fill.
 
+For several references, add a compact task-to-file map with concrete read
+conditions. Give each reference one coherent topic, with examples and caveats
+beside the decisions they explain. Keep links directly reachable from `SKILL.md`
+and paths relative to the skill root. Do not split a short, cohesive skill just
+to create folders, or require every reference in a supposedly conditional map.
+
 Write the procedure or review criteria with:
 
 - A default approach before exceptions.
@@ -104,8 +118,9 @@ Otherwise, proceed and state the relevant assumption.
 
 - Remove introductions, repeated meanings, stale facts, and empty sections.
 - Keep each rule in one authoritative place within the package. Include the
-  knowledge needed to execute the workflow; do not require another skill or an
-  external authoring guide to explain it.
+  knowledge needed to execute the skill's own capability. Explicit companion
+  loading may compose independent skills; do not rely on an unnamed skill or
+  external authoring guide to explain missing instructions.
 - Prefer direct verbs and concrete nouns over jargon, slogans, and roleplay.
 - State desired behavior. Reserve prohibitions for real boundaries and pair
   them with the safe alternative where useful.
@@ -124,9 +139,15 @@ Parse frontmatter with an existing YAML parser and check the field constraints.
 Check local references, required tools, and discovery in the target environment.
 Preserve applicable licenses when incorporating third-party material. Run bundled
 scripts with their documented interpreter in a safe workspace, checking normal
-and error paths. For instruction changes, try a representative request when
-practical and inspect whether the agent follows the intended procedure. Report
-anything you could not check.
+and error paths.
+
+Check routing and execution separately. Use realistic requests that should
+activate the skill, adjacent requests that should not, and at least one boundary
+or failure case. Define the expected behavior before judging results. For a
+material revision, compare the previous version or a no-skill baseline in clean
+sessions when practical; inspect loaded files and wasted steps as well as final
+outputs. A static walkthrough can expose ambiguity but does not prove runtime
+activation or improvement. Report anything you could not check.
 
 Fix ambiguity, missing knowledge, or wasted steps based on observed behavior.
 Rerun affected checks after revision. Stop when the agreed criteria hold or
