@@ -64,6 +64,21 @@ Keep critical safeguards in the main file when an agent might not recognize the
 condition that would load them. Do not make file count or brevity the objective;
 a short cohesive skill may need no references.
 
+### Check sources and examples
+
+The skill should explain the principle, when it applies, and its trade-off before
+showing an implementation. Essential guidance must remain usable without opening
+optional sources. Use conceptual writing to explain rationale and primary docs or
+source to verify exact behavior; popularity and API resemblance are not evidence
+that a design fits.
+
+Check that each example resolves a specific ambiguity, states its assumptions,
+and distinguishes the lesson from incidental names, dependencies, and structure.
+Reserve exact templates for tasks that require exact output. Keep dependency
+notes conditional and label external links by purpose. Walk through a different
+set of constraints: can the agent preserve the guarantee while choosing another
+API shape, mechanism, or module boundary?
+
 ### Distinguish constraints from preferences
 
 Separate verified technical requirements, project conventions, and design

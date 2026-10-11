@@ -96,10 +96,21 @@ Write the procedure or review criteria with:
 - Exact steps for fragile operations; judgment where multiple approaches work.
 - Short rationale for non-obvious choices and safeguards for material risks.
 
-Use a concrete example when wording alone leaves an important ambiguity. Model
-actual inputs and useful outputs; avoid decorative examples and placeholders.
-Read project instructions before prescribing commands or conventions. Resolve
-bundled paths from the skill directory, not the caller's working directory.
+Teach the concept, its applicability, and the trade-off before showing an
+implementation. Distill the reasoning from source material into instructions the
+skill can execute without opening external links. Prefer conceptual explanations
+for rationale and primary documentation/source for exact, version-specific
+behavior. Label links as required task dependencies or optional evidence/further
+reading; do not require a tour of example libraries to perform an unrelated task.
+Keep library-specific details conditional on using that dependency.
+
+Use a concrete example when wording alone leaves an important ambiguity. State
+what it illustrates, which assumptions make it work, and which choices are
+incidental. Keep it small enough that its API shape, dependencies, or layers do
+not become an implied template. Use an exact template only when the task needs
+that exact output. Read project instructions before prescribing commands or
+conventions. Resolve bundled paths from the skill directory, not the caller's
+working directory.
 
 ## 4. Edit for behavioral value
 
@@ -148,6 +159,10 @@ material revision, compare the previous version or a no-skill baseline in clean
 sessions when practical; inspect loaded files and wasted steps as well as final
 outputs. A static walkthrough can expose ambiguity but does not prove runtime
 activation or improvement. Report anything you could not check.
+
+For design guidance with examples, include a case with different constraints
+that should keep the principle but change the implementation. Check that the
+agent adapts rather than copies the example's structure or dependencies.
 
 Fix ambiguity, missing knowledge, or wasted steps based on observed behavior.
 Rerun affected checks after revision. Stop when the agreed criteria hold or
