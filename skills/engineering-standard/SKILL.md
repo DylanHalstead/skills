@@ -71,6 +71,11 @@ unrelated cleanup into the change. Remove imports, variables, and functions
 that your change makes dead; report pre-existing dead code instead of expanding
 the diff.
 
+For a fix or behavior-preserving refactor, identify the observable change the
+request requires. Preserve other callers' behavior, including writes, enqueue
+timing, errors, and responses. Explain a deliberate deviation before expanding
+the change.
+
 Add an abstraction only when it enforces an invariant, hides non-obvious
 complexity, or removes duplication callers would otherwise get wrong. Prefer a
 simple interface over a simple implementation and keep side effects visible in
