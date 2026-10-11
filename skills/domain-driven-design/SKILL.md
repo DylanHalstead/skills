@@ -58,10 +58,10 @@ tense such as `OrderPlaced`. Do not publish an event for every field change.
 Distinguish events inside a context from integration events that cross a
 boundary.
 
-Keep persistence mechanics out of the domain. A repository interface should
-speak domain language and sit with the model; its SQL, ORM, or API adapter sits
-in infrastructure. Add a repository or factory only when it hides real
-persistence or construction complexity.
+Keep callers from coordinating persistence details. Follow the repository's
+model architecture; introduce a separate repository or adapter when it hides
+meaningful storage complexity or supports a required substitution boundary.
+Add a factory only when it hides real construction complexity.
 
 ## Invest selectively
 
