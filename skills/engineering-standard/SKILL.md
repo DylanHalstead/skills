@@ -108,6 +108,12 @@ complete operation: work before batching, serialized queue arguments, concurrenc
 across workers as well as within one worker, and downstream completion. A local
 limit or successful enqueue does not establish a system-wide guarantee.
 
+When changing delivery or integration tooling, trace changed inputs through the
+trigger, checked-out revision, dependency build, runtime artifact, and terminal
+success or failure. Verify that the deployed artifact comes from the intended
+revision and includes its runtime dependencies; a passing build alone is not
+that evidence.
+
 ## Review findings
 
 Report a concern only when you can show a reachable failure, violated
