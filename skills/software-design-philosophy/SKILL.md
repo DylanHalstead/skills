@@ -65,6 +65,12 @@ callers.
 Keep invariants close to the state they govern. Expose operations that preserve
 the invariant rather than mutable parts callers must coordinate correctly.
 
+For stateful behavior, make state transitions and the order of effects easy to
+follow. Separate computation from external effects when that clarifies the
+flow. Keep ordering-sensitive updates in the operation that owns the invariant,
+rather than across helpers callers must invoke in a remembered sequence.
+Do not split a cohesive operation merely to make each helper pure.
+
 ## Comments as design documentation
 
 Interface comments tell callers what they cannot learn from the signature:
@@ -79,10 +85,21 @@ more complex design.
 
 ## Design process
 
-Scale design work to risk. For a material boundary or abstraction, compare a
-second design built around a different constraint. Judge how each option
-affects amplification, load, and unknown unknowns. For a local mechanical
-change, follow the established design without manufacturing alternatives.
+Scale design work to risk. For a new or changed boundary, sketch the caller's
+contract before choosing internals: inputs, guarantees, observable effects,
+and failure behavior. Clarify completion and resource ownership when relevant.
+Use a signature or a short interaction example; it need not become source
+comments or a saved document.
+
+Before refining a material design, identify the assumption most likely to
+invalidate it. Check it with the smallest useful investigation: existing code,
+a focused test or experiment, or authoritative documentation. State any
+unverified assumption that affects the recommendation.
+
+For a material boundary or abstraction, compare a second design built around
+a different constraint. Judge how each option affects amplification, load, and
+unknown unknowns. For a local mechanical change, follow the established design
+without manufacturing alternatives.
 
 Prefer strategic improvements that reduce complexity inside the requested
 scope. Do not turn “leave it better” into unrelated cleanup. A broad structural
