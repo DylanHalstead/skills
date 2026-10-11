@@ -2,6 +2,12 @@
 
 Personal collection of agent skills for day-to-day software development.
 
+## Complete setup
+
+This repository owns the custom skill sources. The complete personal collection,
+including third-party skills and their pinned revisions, is in the
+[dotfiles skill lock](https://github.com/DylanHalstead/dotfiles/blob/main/skills-lock.json).
+
 ## Skills
 
 - [domain-driven-design](skills/domain-driven-design/SKILL.md): Model business rules, identity, and consistency boundaries.
