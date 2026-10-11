@@ -28,17 +28,27 @@ toolchain, before choosing language features or APIs.
 
 ## Dependencies and interfaces
 
+Define the caller's operation, result, failure, and completion guarantees before
+choosing a client structure. Separate reusable configuration from per-call state
+and make ownership explicit.
+
 Wire clients and configuration at the entry point and inject them through
 constructors or parameters. Avoid mutable globals, service lookup, and I/O in
 `init()`. Reuse long-lived clients; validate required configuration at startup.
 
 Start with concrete types; reuse transport/SDK injection seams for tests.
 Define narrow interfaces in the consuming package when substitution or a contract
-needs one; neither mirror producers nor require multiple implementations. Reuse
-standard interfaces. Prefer concrete returns unless hiding implementation serves
-the API, and plain constructors/config structs before functional options or DI
-tools. A typed nil pointer in an interface is non-nil; when returning no error,
-return a nil `error` interface rather than a typed nil pointer.
+needs one; include only the methods the consumer uses, not a mirror of the SDK.
+Neither require multiple implementations nor export producer interfaces solely
+for mocking. Reuse standard interfaces. Prefer concrete returns unless hiding
+implementation serves the API.
+
+Keep required inputs explicit. Prefer plain constructors/config structs for small,
+stable settings; use functional options for evolving optional behavior. Define
+defaults and validate the resolved configuration at construction.
+Keep per-call overrides separate from shared client configuration. Prefer these
+explicit seams to DI tools. A typed nil pointer in an interface is non-nil; when
+returning no error, return a nil `error` interface rather than a typed nil pointer.
 
 ## Errors, logging, and resources
 
@@ -78,6 +88,9 @@ subtest and `t.Cleanup` for owned resources. Parallelize only isolated tests.
 
 ## References and checks
 
+- [Client design](references/clients.md): read before changing client contracts,
+  constructors, functional options, client-injection interfaces, resource ownership,
+  HTTP transports, or retry policies.
 - [Modern Go](references/modern-go.md): read when choosing features or APIs.
 - [Testing](references/testing.md): read for table setup, fakes, or assertions.
 - [Concurrency](references/concurrency.md): read before changing goroutines,
