@@ -103,7 +103,10 @@ Hold changed code to all four. When they conflict, state the trade-off.
   queries, missing pagination or backpressure, and unsafe shared state.
 
 Performance claims need evidence. Point to a round trip, allocation, scan, lock,
-or measurement. Do not sacrifice clarity for an unmeasured hot path.
+or measurement. Do not sacrifice clarity for an unmeasured hot path. Trace the
+complete operation: work before batching, serialized queue arguments, concurrency
+across workers as well as within one worker, and downstream completion. A local
+limit or successful enqueue does not establish a system-wide guarantee.
 
 ## Review findings
 
