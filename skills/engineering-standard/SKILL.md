@@ -45,11 +45,13 @@ when it fights a sound local convention.
 Read these companion skills in full when their conditions apply:
 
 - **`software-design-philosophy`**: substantial feature work, structural
-  refactors, or changes to module boundaries, APIs, abstractions, or architecture.
+  refactors, or designing, changing, or reviewing module boundaries, APIs,
+  abstractions, or architecture.
   Fallback path: `../software-design-philosophy/SKILL.md`.
-- **`domain-driven-design`**: changes to business rules, invariants, model
-  boundaries, or service boundaries. Skip scripts, infrastructure glue, and CRUD
-  with no meaningful domain invariant. Fallback path: `../domain-driven-design/SKILL.md`.
+- **`domain-driven-design`**: designing, changing, or reviewing business rules,
+  invariants, model boundaries, or service boundaries. Skip scripts,
+  infrastructure glue, and CRUD with no meaningful domain invariant.
+  Fallback path: `../domain-driven-design/SKILL.md`.
 
 Find each skill in the available skills list and read its advertised `SKILL.md`
 path; its description alone is not the guidance. If it is not listed, resolve
