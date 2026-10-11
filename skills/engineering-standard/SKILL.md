@@ -40,7 +40,11 @@ For a material change, read two or three comparable implementations to learn
 the local pattern. For a small or mechanical change, inspect only enough nearby
 code to establish the convention. Name representative files when the pattern
 supports a design decision. Do not call a generic best practice an improvement
-when it fights a sound local convention.
+when it fights a sound local convention. Verify that a comparable implementation's
+assumptions and resource ownership apply to this task. Carry over the rationale,
+not incidental API shapes or layers; choose the structure for the current
+contract. Flag conflicting project guidance rather than propagating a known
+retired pattern.
 
 Read these companion skills in full when their conditions apply:
 
