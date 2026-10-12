@@ -91,8 +91,11 @@ subtest and `t.Cleanup` for owned resources. Parallelize only isolated tests.
 - [Client design](references/clients.md): read before changing client contracts,
   constructors, functional options, client-injection interfaces, resource ownership,
   HTTP transports, or retry policies.
-- [Modern Go](references/modern-go.md): read when choosing features or APIs.
-- [Testing](references/testing.md): read for table setup, fakes, or assertions.
+- [Modern Go](references/modern-go.md): read when adopting version-dependent
+  features or replacing boilerplate with newer standard-library APIs.
+- [Testing](references/testing.md): read when designing table setup, dependency
+  isolation, fakes, or coordinated concurrency tests. Adding an assertion to an
+  established test does not require it.
 - [Concurrency](references/concurrency.md): read before changing goroutines,
   channels, cancellation, synchronization, or shutdown.
 - [Performance](references/performance.md): read for optimization or benchmarks.
