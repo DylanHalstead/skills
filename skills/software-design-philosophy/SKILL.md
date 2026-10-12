@@ -97,9 +97,10 @@ a focused test or experiment, or authoritative documentation. State any
 unverified assumption that affects the recommendation.
 
 For a material boundary or abstraction, compare a second design built around
-a different constraint. Judge how each option affects amplification, load, and
-unknown unknowns. For a local mechanical change, follow the established design
-without manufacturing alternatives.
+a different constraint when a viable alternative exists. Judge how each option
+affects amplification, load, and unknown unknowns. If only one design is viable,
+explain which constraints eliminate the alternatives. For a local mechanical
+change, follow the established design without manufacturing alternatives.
 
 Prefer strategic improvements that reduce complexity inside the requested
 scope. Do not turn “leave it better” into unrelated cleanup. A broad structural
