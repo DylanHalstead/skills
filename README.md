@@ -18,4 +18,5 @@ including third-party skills and their pinned revisions, is in the
 - [ruby-development](skills/ruby-development/SKILL.md): Write, test, review, and debug Ruby, with conditional Rails guidance.
 - [skill-creator](skills/skill-creator/SKILL.md): Create, refine, and validate skills.
 - [software-design-philosophy](skills/software-design-philosophy/SKILL.md): Apply A Philosophy of Software Design to modules, interfaces, and complexity.
-- [user-interface-design](skills/user-interface-design/SKILL.md): Work through UI design, visual refinement, and review using project intent and feature-first proposals.
+- [user-interface-design](skills/user-interface-design/SKILL.md): Design usable interfaces, navigation, interaction, and accessibility within the agreed visual direction.
+- [visual-design](skills/visual-design/SKILL.md): Develop, compare, apply, and critique visual direction grounded in the subject, audience, and project intent.

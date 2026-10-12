@@ -9,9 +9,10 @@ Build the requested feature using the project's framework, data layer, and styli
 system. Keep page data, interaction state, and browser resources with the owners
 that can govern their lifetimes.
 
-Own implementation decisions. UI design owns visual direction and observable
-interaction expectations; frontend development implements those expectations
-through components, state, routing, events, and runtime behavior. A runtime fix
+Own implementation decisions. `visual-design` owns art direction;
+`user-interface-design` owns UI fundamentals and observable interaction
+expectations. Frontend development implements the agreed experience through
+components, state, routing, events, and runtime behavior. A runtime fix
 with an agreed interface does not require redesigning it.
 
 ## Establish the local contract
@@ -27,6 +28,22 @@ intent and the existing styling system for implementation. Surface conflicting
 requirements that affect the requested change; do not silently rewrite intent,
 audit unrelated token drift, or create a second design system. When no design
 document exists, follow established components and styles.
+
+When implementation leaves design decisions open or changes their contract,
+load the relevant companion from the available skills list and read its
+`SKILL.md` if it is not already loaded. If unlisted, resolve the fallback relative
+to this skill:
+
+- **`user-interface-design`** (`../user-interface-design/SKILL.md`): for unresolved
+  or changed hierarchy, navigation, controls, states, interaction expectations,
+  or accessibility requirements.
+- **`visual-design`** (`../visual-design/SKILL.md`): for unresolved or changed art
+  direction, expressive composition, or visual identity. Building a new page
+  inside an agreed system does not automatically require new art direction.
+
+Do not reopen settled decisions merely because implementation changes. An
+agreed-interface runtime fix can stay in this skill. If a required companion is
+unavailable, ask for its location and continue independent work.
 
 For a focused fix, trace the interaction and data path that can explain the
 failure. For a feature, identify the required inputs, actions, states, and reset

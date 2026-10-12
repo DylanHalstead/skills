@@ -82,7 +82,10 @@ risk, reversibility, and the opportunity to recover. Avoid both silent,
 irreversible loss and confirmation dialogs for every routine action.
 
 Loading, no records, no matching results, and permission failures are distinct
-states. Explain the state and offer an applicable next action. Retain usable
+states. Explain the state and offer an applicable next action. For partial success,
+keep completed work visible and make failed or pending portions identifiable;
+define whether retry affects only failed work. Do not present a mixed outcome
+as total success or erase usable content because one region failed. Retain usable
 cancellation for long operations where supported.
 
 ## Alternatives to gestures
@@ -109,6 +112,23 @@ Let users interrupt or reverse an animated interaction when its action allows
 that. Motion must not delay the next useful action. Specify the feedback and
 continuity needed rather than prescribing CSS properties or animation libraries.
 
+Give immediate visual press feedback while preserving normal activation and
+cancel behavior; feedback on press does not mean committing an action on press.
+During direct manipulation, keep the object aligned with the user's movement
+and preserve where it was grabbed. On release, continuity and momentum can help
+explain where it settles; bounce is not required for an ordinary menu or button.
+An interrupted transition should continue from the visible position rather than
+jumping to its old target. Reversible panels should retain a coherent relation
+to their source and return path.
+
+Distinguish interrupting presentation from canceling an operation. A user can
+reverse a panel transition without resubmitting its form or undoing a server
+write. Specify which controls remain available, including the non-gesture
+alternative. Translucency is optional; if used, preserve legibility over real
+backgrounds and provide a solid treatment when required by contrast or reduced
+transparency. Leave velocity calculation, spring parameters, and pointer handling
+to implementation guidance.
+
 ## Check beyond the screenshot
 
 - Measure foreground/background contrast: 4.5:1 normal text, 3:1 large text
@@ -132,3 +152,11 @@ continuity needed rather than prescribing CSS properties or animation libraries.
 
 A source-only review can identify missing contracts, but cannot confirm rendered
 contrast, layout, or assistive-technology behavior.
+
+## Background
+
+The direct-manipulation guidance adapts concepts from Emil Kowalski's
+[`apple-design` skill](https://github.com/emilkowalski/skills/blob/2d228630ba1446365f614a108cb8252f1feda202/skills/apple-design/SKILL.md),
+particularly press feedback, continuity, and interruptibility. These are optional
+background, not a requirement to use Apple aesthetics or any spring library.
+The [source license](../licenses/apple-design-MIT.txt) is retained.

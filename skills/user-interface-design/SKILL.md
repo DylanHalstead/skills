@@ -1,6 +1,6 @@
 ---
 name: user-interface-design
-description: "Design, refine, and review user interfaces through feature-first layout, visual hierarchy, and constrained design systems. Use for new screens or components, UI design discussions, visual polish, spacing, typography, palettes, themes, empty states, forms, tables, and dashboards. Skip frontend plumbing without a UI design concern and software architecture unrelated to interfaces."
+description: "Design, refine, and review usable interfaces through feature-first layout, hierarchy, information architecture, interaction, and accessibility. Use for screens, components, navigation and findability, UX reviews, spacing, readable type, functional color and themes, forms, states, tables, and dashboards. Work within the agreed visual direction; use visual-design for art direction or a new visual identity. Skip frontend plumbing without a UI concern and software architecture unrelated to interfaces."
 ---
 
 # User interface design
@@ -9,11 +9,26 @@ Start with what the user needs to do and see. Establish hierarchy and grouping
 before choosing decorative details. Use this guidance for design discussions,
 implementation, and review.
 
-Own visual and interaction decisions: what users see, understand, can do, and
-can recover from. Specify observable behavior without prescribing state storage,
-router APIs, event handling, hydration, or framework architecture. Those belong
-to frontend-development guidance. A runtime-only fix with an agreed interface
-does not require reopening its design.
+Own UI fundamentals and observable interaction decisions: what users notice,
+understand, can find, can do, and can recover from. Apply the agreed visual
+language without inventing a replacement identity. Specify behavior without
+prescribing state storage, router APIs, event handling, hydration, or framework
+architecture.
+
+Load companions from the available skills list and read their `SKILL.md` when
+their concerns apply. If unlisted, resolve the fallback relative to this skill:
+
+- **`visual-design`** (`../visual-design/SKILL.md`): when the request develops,
+  compares, replaces, or critiques art direction, expressive composition, or
+  visual identity. A local readability, spacing, navigation, or form-state fix
+  within an agreed system does not need it.
+- **`frontend-development`** (`../frontend-development/SKILL.md`): when building
+  or reviewing implementation. It owns components, state, routing, events,
+  runtime motion, and browser behavior. A runtime-only fix with an agreed
+  interface does not require reopening its design.
+
+If a required companion is unavailable, ask for its location and continue
+independent work.
 
 ## Project intent: DESIGN.md
 
@@ -50,8 +65,9 @@ mandatory phases, approval gates, or an execution-plan template.
    action. Design that surface before inventing navigation, sidebars, or a page
    frame. In an existing app, work within its shell unless changing it is in scope.
 2. **Make the proposal concrete.** Use representative content and a low-fidelity
-   sketch or interface example. Resolve layout and hierarchy in grayscale before
-   investing in color, shadows, or icons. A small request may need only a local
+   sketch or interface example. Use grayscale when it isolates a structural
+   choice; include meaningful imagery or type treatment when the content or
+   agreed direction depends on it. A small request may need only a local
    comparison, not a whole-screen sketch.
 3. **Keep the version useful and small.** Include the states needed for the
    agreed feature. Omit speculative controls and implied functionality that will
@@ -65,7 +81,8 @@ mandatory phases, approval gates, or an execution-plan template.
 
 ## Design defaults
 
-Use these when project intent leaves a gap.
+Use these when project intent and the agreed visual direction leave a gap.
+These are usability defaults, not a prescribed visual identity.
 
 ### Hierarchy and layout
 
@@ -93,8 +110,8 @@ Use these when project intent leaves a gap.
 - Define a fixed palette before assigning shades across components. Tune it in
   context rather than deriving new shades independently at each call site.
 - Keep font choice, corner radius, color temperature, and copy tone consistent
-  with the product's personality. Without documented intent, infer from the
-  product; ask before committing to a materially different direction.
+  with the established or agreed personality. Developing a materially different
+  direction belongs to `visual-design`, not a local UI refinement.
 - Use square corners for a formal direction, modest rounding for a neutral one,
   or stronger rounding for a playful one. Do not mix square and rounded component
   treatments without a documented reason. Keep nested inner radii smaller than
@@ -115,9 +132,10 @@ Use these when project intent leaves a gap.
 
 - Use shadows to express elevation, not to decorate every box. Prefer grouping,
   background changes, or restrained depth over unnecessary borders.
-- Account for empty, loading, error, disabled, and interaction states when the
-  feature can enter them. Empty states explain what is missing and offer a useful
-  action when one exists; not every empty state needs an illustration or CTA.
+- Account for empty, loading, partial success, error, disabled, and interaction
+  states when the feature can enter them. Empty states explain what is missing
+  and offer a useful action when one exists; not every empty state needs an
+  illustration or CTA.
 - Preserve semantic structure, visible form labels, keyboard operation, and
   visible focus. Do not rely on color, hover, or motion alone to convey meaning.
 - Check actual foreground/background pairs: normal text needs at least 4.5:1;
@@ -133,6 +151,8 @@ skill's directory; use the available file-reading tool.
 
 | Condition | Reference |
 | --- | --- |
+| Navigation structure, categories, labels, search/browse, or findability | [Information architecture](references/information-architecture.md) |
+| UX audit, task walkthrough, or evidence-based usability critique | [UX evaluation](references/ux-evaluation.md) |
 | Competing content, grouping, width, responsive layout, or density | [Hierarchy and layout](references/hierarchy-layout.md) |
 | Font selection, type scale, alignment, line-height, or text treatment | [Typography](references/typography.md) |
 | Creating a palette, choosing color roles, or designing dark mode | [Color and theming](references/color-theming.md) |
@@ -149,8 +169,9 @@ Check what applies to the requested surface:
 - Grouping and density support the task; text and controls remain usable.
 - Type, spacing, radius, palette, and elevation follow coherent systems.
 - Representative content and applicable empty/error/loading states fit.
-- Action wording, recovery, and navigation behavior support the task without
-  prescribing unrelated implementation choices.
+- Navigation labels and organization support finding the task's starting point.
+- Action wording, recovery, and navigation behavior support completing the task
+  without prescribing unrelated implementation choices.
 - Semantics, contrast, keyboard focus, and responsive behavior support the user.
 
 Source inspection alone does not establish rendered contrast, layout, or
