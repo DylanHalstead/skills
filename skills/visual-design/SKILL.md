@@ -1,6 +1,6 @@
 ---
 name: visual-design
-description: "Develop, compare, apply, and critique visual direction for websites and app surfaces. Use for art direction, visual identity, expressive composition, landing pages, portfolios, reference analysis, or a redesign that changes the visual language. Can explore direction without implementing it. Skip routine spacing, readability, form-state, accessibility, or navigation fixes inside an agreed design, and software architecture unrelated to visual work."
+description: "Develop, compare, apply, and critique visual direction for websites and app surfaces. Use when establishing or changing art direction, visual identity, or expressive composition; evaluating visual references; or designing a landing page or portfolio with an unresolved visual direction. Can explore direction without implementing it. Skip routine usability fixes and implementation work inside an agreed design, and software architecture unrelated to visual work."
 ---
 
 # Visual design

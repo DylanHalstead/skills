@@ -1,6 +1,6 @@
 ---
 name: software-design-philosophy
-description: "Guides and evaluates software design using John Ousterhout's A Philosophy of Software Design (APOSD): complexity, deep modules, information hiding, interface design, error design, and design comments. Use when planning or reviewing APIs, module boundaries, abstractions, architecture, or structural refactors; when an interface feels complex; or when code seems over-engineered. Skip mechanical changes that preserve the existing design."
+description: "Guides and evaluates software design using John Ousterhout's A Philosophy of Software Design (APOSD): complexity, deep modules, information hiding, interface design, error design, and design comments. Use when designing, changing, or reviewing APIs, module boundaries, abstractions, architecture, or structural refactors; when an interface feels complex; or when code seems over-engineered. Skip mechanical changes that preserve the existing design."
 ---
 
 # Software design philosophy

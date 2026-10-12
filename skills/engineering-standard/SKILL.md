@@ -1,6 +1,6 @@
 ---
 name: engineering-standard
-description: "Applies the house engineering standard to software work: repository conventions, scope control, local patterns, readability, idiomatic code, performance, scalability, and evidence-based findings. Use for any request to plan, implement, review, evaluate, or refactor code. Load relevant repository skills alongside it."
+description: "Applies the house engineering standard to software work: repository conventions, scope control, local patterns, readability, idiomatic code, performance, scalability, and evidence-based findings. Use for any request to plan, implement, review, evaluate, or refactor code."
 ---
 
 # Engineering standard
