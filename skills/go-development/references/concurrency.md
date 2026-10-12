@@ -45,6 +45,6 @@ Test blocked cancellation, early consumer exit, bounds, and failure propagation
 as applicable. A passing race test only checks executed paths; it does not prove
 termination or leak freedom.
 
-Sources: [Mutex or channel](https://go.dev/wiki/MutexOrChannel),
+Optional background: [Mutex or channel](https://go.dev/wiki/MutexOrChannel),
 [Go pipelines](https://go.dev/blog/pipelines),
 [errgroup](https://pkg.go.dev/golang.org/x/sync/errgroup).

@@ -98,7 +98,9 @@ injected transports or existing testing seams; avoid real network calls and long
 sleeps. Assert outcomes and ownership, not private option representations or a
 particular arrangement of helpers.
 
-## Conceptual reading
+## Optional background
+
+The guidance above is usable without opening these sources.
 
 - [Go code review comments: interfaces](https://go.dev/wiki/CodeReviewComments#interfaces) — consumer contracts and concrete returns.
 - [Functional options for friendly APIs](https://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis) — defaults, explicit configuration, and API evolution.
@@ -107,11 +109,12 @@ particular arrangement of helpers.
 
 ## Dependency-specific notes
 
-Use only the notes for a dependency involved in the task. Consult its installed
-version's documentation or source to verify exact behavior.
+Use only the notes for a dependency involved in the task. These links are
+navigation aids; their default branches or latest documentation may differ from
+the project's dependency version. When a change depends on an API detail,
+verify it against the project's resolved dependency source or matching
+documentation.
 
-- **zap:** [options](https://github.com/uber-go/zap/blob/master/options.go) use a
-  sealed interface with an unexported apply method.
 - **GAX v2:** [call options](https://github.com/googleapis/gax-go/blob/main/v2/call_option.go)
   and [Invoke](https://github.com/googleapis/gax-go/blob/main/v2/invoke.go) scope
   a retryer to each call through a factory. Return fresh stateful backoff there.

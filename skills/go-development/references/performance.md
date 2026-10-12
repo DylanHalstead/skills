@@ -34,5 +34,5 @@ define freshness and ownership, and never return memory already released to a
 pool. Rerun correctness tests and retain changes only when measured benefit
 warrants complexity. Report workload, before/after metrics, and uncertainty.
 
-Sources: [Go diagnostics](https://go.dev/doc/diagnostics),
+Optional background: [Go diagnostics](https://go.dev/doc/diagnostics),
 [Benchmarks](https://pkg.go.dev/testing#hdr-Benchmarks).
