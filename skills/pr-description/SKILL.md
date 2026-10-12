@@ -82,15 +82,10 @@ Include an item only when it changes how someone should assess or use the change
 - a verified issue, design document, or prior discussion
 - meaningful validation when its result changes confidence in risky behavior
 
-Use screenshots for visual behavior and before/after examples for changed
-contracts. In **What**, add one compact structural view only when it makes a
-changed dependency, control flow, data flow, state boundary, or architecture
-easier to understand than prose and the diff. Prefer a call tree, data flow, or
-architecture diagram. Use a component tree or contract/type shape only when it
-shows ownership the diff does not; use a focused `diff` block only for a changed
-relationship. Omit visuals for localized, mechanical, configuration-only, or
-self-evident changes. Keep the view beside the prose it supports and do not add
-a generic heading.
+Include screenshots, before/after examples, or a compact structural view only
+when they clarify changed behavior, contracts, or ownership beyond prose and the
+diff. Keep the visual beside the relevant explanation; omit decorative or
+self-evident views.
 
 ## Cut aggressively
 
