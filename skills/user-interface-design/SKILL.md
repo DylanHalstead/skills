@@ -101,21 +101,15 @@ These are usability defaults, not a prescribed visual identity.
 
 ### Type, color, and personality
 
-- Use an approximately modular, hand-tuned type scale:
-  `12, 14, 16, 18, 20, 24, 30, 36px`, expressed in `rem` where practical.
-  Extend it only for a real need.
-  Limit the UI to two font families; use 400–500 for body and 600–700 for emphasis.
-- Use tighter line-height for headings (about 1–1.25) and more relaxed line-height
-  for body text (about 1.5–1.75), adjusted for font and line length.
+- Use a coherent, hand-tuned type scale and a limited set of font families and
+  weights. Tune line-height for the font and line length; headings generally need
+  tighter leading than body text. Read [Typography](references/typography.md)
+  when establishing these treatments.
 - Define a fixed palette before assigning shades across components. Tune it in
   context rather than deriving new shades independently at each call site.
 - Keep font choice, corner radius, color temperature, and copy tone consistent
   with the established or agreed personality. Developing a materially different
   direction belongs to `visual-design`, not a local UI refinement.
-- Use square corners for a formal direction, modest rounding for a neutral one,
-  or stronger rounding for a playful one. Do not mix square and rounded component
-  treatments without a documented reason. Keep nested inner radii smaller than
-  outer radii; preserve functional shapes such as circular avatars.
 
 ### Interaction and language
 
