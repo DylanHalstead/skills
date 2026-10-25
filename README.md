@@ -14,6 +14,7 @@ including third-party skills and their pinned revisions, is in the
 - [engineering-standard](skills/engineering-standard/SKILL.md): Follow repository conventions and review changes with evidence.
 - [frontend-development](skills/frontend-development/SKILL.md): Build frontend features with clear state ownership, component composition, loading behavior, styling, and browser resource lifetimes.
 - [go-development](skills/go-development/SKILL.md): Write, test, review, and debug idiomatic Go code.
+- [issue-authoring](skills/issue-authoring/SKILL.md): Investigate and distill context into concise issues with verifiable outcomes, milestones, and dependencies across trackers.
 - [pr-description](skills/pr-description/SKILL.md): Write pull request titles and descriptions.
 - [ruby-development](skills/ruby-development/SKILL.md): Write, test, review, and debug Ruby, with conditional Rails guidance.
 - [skill-creator](skills/skill-creator/SKILL.md): Create, refine, and validate skills.
