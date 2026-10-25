@@ -46,8 +46,8 @@ styles or silently revise the document. Safety, accessibility, and explicit user
 authorization still apply; surface a conflict rather than implementing an unsafe
 requirement.
 
-Read existing components to understand how to work on the requested surface,
-not to redefine design intent. Do not audit Tailwind classes or tokens against
+Read existing components to understand how to work on the requested surface, not
+to redefine design intent. Do not audit Tailwind classes or tokens against
 `DESIGN.md` unless asked. If a mismatch encountered during the work affects the
 result, mention it briefly and use the documented intent for the requested
 change. Do not reconcile unrelated drift or create a second design system.
@@ -57,13 +57,14 @@ defaults. Do not require a new document or write one without authorization.
 
 ## Work through the design
 
-Use this order to reason about new UI. For a focused adjustment or review,
-start at the relevant concern and leave settled decisions alone. These are not
+Use this order to reason about new UI. For a focused adjustment or review, start
+at the relevant concern and leave settled decisions alone. These are not
 mandatory phases, approval gates, or an execution-plan template.
 
 1. **Start with a feature.** Identify the real content, primary task, and useful
    action. Design that surface before inventing navigation, sidebars, or a page
-   frame. In an existing app, work within its shell unless changing it is in scope.
+   frame. In an existing app, work within its shell unless changing it is in
+   scope.
 2. **Make the proposal concrete.** Use representative content and a low-fidelity
    sketch or interface example. Use grayscale when it isolates a structural
    choice; include meaningful imagery or type treatment when the content or
@@ -73,21 +74,22 @@ mandatory phases, approval gates, or an execution-plan template.
    agreed feature. Omit speculative controls and implied functionality that will
    not work. Design the empty state with the populated state.
 4. **Apply a coherent system.** Reuse documented scales and components. Where
-   guidance is missing, establish only the tokens needed for this surface. Refine
-   hierarchy, grouping, type, color, and elevation where they affect the task;
-   load supporting references only for those concerns.
-5. **Check the result.** Review the applicable criteria below. Check the rendered
-   result and changed interactions when implementing a surface.
+   guidance is missing, establish only the tokens needed for this surface.
+   Refine hierarchy, grouping, type, color, and elevation where they affect the
+   task; load supporting references only for those concerns.
+5. **Check the result.** Review the applicable criteria below. Check the
+   rendered result and changed interactions when implementing a surface.
 
 ## Design defaults
 
-Use these when project intent and the agreed visual direction leave a gap.
-These are usability defaults, not a prescribed visual identity.
+Use these when project intent and the agreed visual direction leave a gap. These
+are usability defaults, not a prescribed visual identity.
 
 ### Hierarchy and layout
 
-- Give the primary content and action more visual weight than supporting content.
-  First reduce competitors; then adjust size, weight, or contrast as needed.
+- Give the primary content and action more visual weight than supporting
+  content. First reduce competitors; then adjust size, weight, or contrast as
+  needed.
 - Use labels when they clarify meaning. Omit redundant labels on displayed data;
   retain visible labels for form inputs. Emphasize labels when users scan for
   categories, such as a specification sheet.
@@ -102,9 +104,9 @@ These are usability defaults, not a prescribed visual identity.
 ### Type, color, and personality
 
 - Use a coherent, hand-tuned type scale and a limited set of font families and
-  weights. Tune line-height for the font and line length; headings generally need
-  tighter leading than body text. Read [Typography](references/typography.md)
-  when establishing these treatments.
+  weights. Tune line-height for the font and line length; headings generally
+  need tighter leading than body text. Read
+  [Typography](references/typography.md) when establishing these treatments.
 - Define a fixed palette before assigning shades across components. Tune it in
   context rather than deriving new shades independently at each call site.
 - Keep font choice, corner radius, color temperature, and copy tone consistent
@@ -117,8 +119,9 @@ These are usability defaults, not a prescribed visual identity.
   consistent across controls, confirmations, and feedback. Errors explain what
   happened and what the user can do next.
 - Make recovery part of the feature: decide what work survives failures and
-  navigation, how users resume, and which consequential actions need confirmation
-  or undo. Choose behavior from risk and reversibility, not a universal dialog rule.
+  navigation, how users resume, and which consequential actions need
+  confirmation or undo. Choose behavior from risk and reversibility, not a
+  universal dialog rule.
 - Identify views users need to share, return to, or revisit through browser
   history. Specify what should be restored without choosing a routing mechanism.
 
@@ -136,29 +139,31 @@ These are usability defaults, not a prescribed visual identity.
   large text needs 3:1 (24 CSS px regular or about 18.67 CSS px bold). Required
   visual cues identifying controls and states need 3:1 against adjacent colors.
 - Do not de-emphasize pricing, terms, warnings, or cancellation paths in ways
-  that obscure important information. Hierarchy must not undermine comprehension.
+  that obscure important information. Hierarchy must not undermine
+  comprehension.
 
 ## Supporting references
 
 Read only the references needed for the request. Paths are relative to this
 skill's directory; use the available file-reading tool.
 
-| Condition | Reference |
-| --- | --- |
-| Navigation structure, categories, labels, search/browse, or findability | [Information architecture](references/information-architecture.md) |
-| UX audit, task walkthrough, or evidence-based usability critique | [UX evaluation](references/ux-evaluation.md) |
-| Competing content, grouping, width, responsive layout, or density | [Hierarchy and layout](references/hierarchy-layout.md) |
-| Font selection, type scale, alignment, line-height, or text treatment | [Typography](references/typography.md) |
-| Creating a palette, choosing color roles, or designing dark mode | [Color and theming](references/color-theming.md) |
-| Elevation, images, icons, corner treatment, or visual finish | [Depth, media, and finish](references/depth-media-finish.md) |
+| Condition                                                                                       | Reference                                                                |
+| ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Navigation structure, categories, labels, search/browse, or findability                         | [Information architecture](references/information-architecture.md)       |
+| UX audit, task walkthrough, or evidence-based usability critique                                | [UX evaluation](references/ux-evaluation.md)                             |
+| Competing content, grouping, width, responsive layout, or density                               | [Hierarchy and layout](references/hierarchy-layout.md)                   |
+| Font selection, type scale, alignment, line-height, or text treatment                           | [Typography](references/typography.md)                                   |
+| Creating a palette, choosing color roles, or designing dark mode                                | [Color and theming](references/color-theming.md)                         |
+| Elevation, images, icons, corner treatment, or visual finish                                    | [Depth, media, and finish](references/depth-media-finish.md)             |
 | Action wording, forms, recovery, navigation behavior, gestures, motion, or accessibility checks | [Interaction and accessibility](references/interaction-accessibility.md) |
-| Charts, data tables, or dashboard composition | [Data visualization](references/data-visualization.md) |
+| Charts, data tables, or dashboard composition                                                   | [Data visualization](references/data-visualization.md)                   |
 
 ## Design checks
 
 Check what applies to the requested surface:
 
-- The proposal follows `DESIGN.md`, or established conventions when it is absent.
+- The proposal follows `DESIGN.md`, or established conventions when it is
+  absent.
 - The primary task and data remain clear without decorative color.
 - Grouping and density support the task; text and controls remain usable.
 - Type, spacing, radius, palette, and elevation follow coherent systems.

@@ -2,10 +2,9 @@
 
 Use named cases and fresh dependencies inside `t.Run`. Keep simple expectations
 in `want` fields; add per-case `setup` and `check` functions when scenarios need
-different dependencies or assertions.
-Bind testify to the subtest's `t` when installed: `require` for prerequisites,
-`assert` for independent comparisons. Prefer small fakes or injected transports
-to introducing a mock framework.
+different dependencies or assertions. Bind testify to the subtest's `t` when
+installed: `require` for prerequisites, `assert` for independent comparisons.
+Prefer small fakes or injected transports to introducing a mock framework.
 
 This example tests `ReadName(io.Reader)`, which decodes a JSON object's `name`
 field and preserves read-error identity. Its `setup` functions create fresh

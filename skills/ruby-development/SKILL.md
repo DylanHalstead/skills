@@ -18,8 +18,8 @@ names alone.
 
 For Rails work, read [Rails mechanisms](references/rails.md) in full before
 changing models, concerns, callbacks, database queries, controller input,
-presenters, components, authorization, feature flags, jobs, or migrations. Do not
-load it for plain Ruby scripts or libraries that do not use Rails.
+presenters, components, authorization, feature flags, jobs, or migrations. Do
+not load it for plain Ruby scripts or libraries that do not use Rails.
 
 ## Values and failures
 
@@ -30,14 +30,14 @@ load it for plain Ruby scripts or libraries that do not use Rails.
   they are meaningful input. Standard Ruby `compact` removes `nil`; Rails
   `compact_blank` also removes `false` and other blank values.
 - Safe navigation handles a `nil` receiver, not invalid input or a missing
-  method on a non-nil object. Do not convert a broken required relationship
-  into an unexplained nil result.
-- Preserve the owning method's failure contract: a boolean result, a value,
-  or an exception are different interfaces. Rescue errors you can handle at
-  that boundary; do not turn a failed write or external operation into success.
+  method on a non-nil object. Do not convert a broken required relationship into
+  an unexplained nil result.
+- Preserve the owning method's failure contract: a boolean result, a value, or
+  an exception are different interfaces. Rescue errors you can handle at that
+  boundary; do not turn a failed write or external operation into success.
 - Check mutation and object ownership before using bang methods or sharing
-  arrays/hashes. A method's `!` suffix signals a more dangerous counterpart,
-  not one universal guarantee about mutation or exceptions.
+  arrays/hashes. A method's `!` suffix signals a more dangerous counterpart, not
+  one universal guarantee about mutation or exceptions.
 
 ## Objects and construction
 
@@ -54,11 +54,11 @@ boundary so callers work with the application's concepts.
 
 ## Verification
 
-Use the repository's test framework and fixture conventions rather than adding
-a new one. Assert observable results and failures, including omitted, nil, empty,
-and false input when those distinctions affect the contract. Make required
-setup and evaluation order visible.
+Use the repository's test framework and fixture conventions rather than adding a
+new one. Assert observable results and failures, including omitted, nil, empty,
+and false input when those distinctions affect the contract. Make required setup
+and evaluation order visible.
 
 Run focused tests and the configured formatter/linter using the project runtime.
-Expand checks when shared behavior changes. Report checks that could not run
-and their prerequisites; do not infer success from unexecuted tests.
+Expand checks when shared behavior changes. Report checks that could not run and
+their prerequisites; do not infer success from unexecuted tests.

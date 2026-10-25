@@ -6,8 +6,8 @@ convert its notation.
 
 ## Construct a palette around usage
 
-Define a constrained set of shades, then select from it across components.
-Avoid generating slightly different variants independently at each call site.
+Define a constrained set of shades, then select from it across components. Avoid
+generating slightly different variants independently at each call site.
 
 1. Choose a base shade in context, such as a primary button with its text.
 2. Choose a dark endpoint for colored text and a light endpoint for a tinted
@@ -25,20 +25,20 @@ states or categorical data, rather than designing every possible color upfront.
 
 HSL makes hue, saturation, and lightness easy to manipulate, but its lightness
 is not perceived brightness and equal steps do not look equally different.
-Neither “always lower saturation when lightening” nor “always increase it” is
-a universal palette rule.
+Neither “always lower saturation when lightening” nor “always increase it” is a
+universal palette rule.
 
 For vivid HSL palettes, raising saturation toward light or dark extremes can
 help avoid washed-out shades. At fixed saturation, the RGB channel spread
-shrinks toward black and white; at either endpoint it becomes zero regardless
-of saturation. Increasing saturation cannot preserve all vividness there.
-For muted tints, lowering saturation may instead serve the intended role.
-Tune saturation alongside lightness and, where appropriate, a small hue shift.
+shrinks toward black and white; at either endpoint it becomes zero regardless of
+saturation. Increasing saturation cannot preserve all vividness there. For muted
+tints, lowering saturation may instead serve the intended role. Tune saturation
+alongside lightness and, where appropriate, a small hue shift.
 
 OKLCH offers more perceptually consistent controls when creating a new scale,
 but chroma is not HSL saturation, and available gamut still limits the result.
-Use the project's color space; do not translate an HSL rule into an OKLCH
-chroma rule or mandate migration.
+Use the project's color space; do not translate an HSL rule into an OKLCH chroma
+rule or mandate migration.
 
 Compare shades on their intended backgrounds. Numerical interpolation can
 produce candidates; rendered context and measured contrast determine whether
@@ -64,15 +64,15 @@ exceptions.
 
 - Start with dark neutral surfaces and off-white text; tune the contrast rather
   than assuming pure black or white is always wrong.
-- Use surface lightness and restrained boundaries for elevation when shadows
-  are hard to see.
-- Check accents against dark surfaces and button text against accent fills.
-  A lighter accent suited to text may not suit a filled button with white text.
+- Use surface lightness and restrained boundaries for elevation when shadows are
+  hard to see.
+- Check accents against dark surfaces and button text against accent fills. A
+  lighter accent suited to text may not suit a filled button with white text.
 - Test focus, errors, disabled controls, charts, and media in each supported
   theme. Do not dim user content or invert diagrams indiscriminately.
 - When a theme choice exists, make it understandable and preserve the user's
   selection. Respect system preference according to the project's contract.
 
 Use measured text and non-text contrast, not “looks muted enough”, as the
-accessibility criterion. See [Interaction and accessibility](interaction-accessibility.md)
-for checks.
+accessibility criterion. See
+[Interaction and accessibility](interaction-accessibility.md) for checks.

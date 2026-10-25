@@ -22,9 +22,9 @@ combine a soft cast shadow with a tighter contact shadow; reduce contact
 strength as apparent height increases. On press, a raised control can flatten;
 during a drag, the item can rise. Preserve legible boundaries without motion.
 
-When using raised or inset cues, keep the apparent light direction consistent.
-A restrained highlight and shadow can indicate depth without photorealism.
-Avoid giving every region the same floating treatment.
+When using raised or inset cues, keep the apparent light direction consistent. A
+restrained highlight and shadow can indicate depth without photorealism. Avoid
+giving every region the same floating treatment.
 
 Use space or background changes to separate groups before adding borders.
 Borders remain useful for precise table structure, inputs, high-contrast modes,
@@ -34,8 +34,8 @@ satisfy a border-free aesthetic.
 ## Design with real media constraints
 
 Use representative photos and content rather than assuming a placeholder will
-match the final asset. If assets are unavailable, show the dependency and use
-a layout that tolerates realistic variation.
+match the final asset. If assets are unavailable, show the dependency and use a
+layout that tolerates realistic variation.
 
 For text over an image, check the region behind the text across crops and
 responsive sizes. A background overlay, separate text surface, or image
@@ -53,13 +53,13 @@ visible on a light surface.
 
 ## Finish only what serves the feature
 
-Use a restrained accent or background treatment when hierarchy already works.
-Do not add regions, illustrations, or custom controls merely to make the screen
+Use a restrained accent or background treatment when hierarchy already works. Do
+not add regions, illustrations, or custom controls merely to make the screen
 feel designed. Prefer native or installed accessible controls; a brand-colored
 selection state need not require a new widget.
 
 Empty states should explain whether the user has no records, no matching
 results, or lacks access. Offer the action that applies: create something,
-adjust filters, or request access. Preserve search and filter controls when
-they help recover from no results. Hide only controls that have no useful
-function in that state.
+adjust filters, or request access. Preserve search and filter controls when they
+help recover from no results. Hide only controls that have no useful function in
+that state.

@@ -5,10 +5,10 @@ description: "Develop, compare, apply, and critique visual direction for website
 
 # Visual design
 
-Develop a visual language that fits the subject, audience, content, and use scene.
-Make the direction concrete enough to discuss or build. Distinctiveness should
-come from those constraints, not from adding fashionable effects or avoiding
-anything familiar.
+Develop a visual language that fits the subject, audience, content, and use
+scene. Make the direction concrete enough to discuss or build. Distinctiveness
+should come from those constraints, not from adding fashionable effects or
+avoiding anything familiar.
 
 ## Ownership and companions
 
@@ -56,9 +56,10 @@ Distinguish the scope from the request:
   Preserve product truth, function, factual copy, and commitments not explicitly
   in scope. Identify proposed departures from documented intent.
 
-Ask if preservation versus replacement changes the result and cannot be inferred.
-Do not silently edit `DESIGN.md`, invent another source of truth, or require a
-new context document. Save decisions only when requested, at their owning scope.
+Ask if preservation versus replacement changes the result and cannot be
+inferred. Do not silently edit `DESIGN.md`, invent another source of truth, or
+require a new context document. Save decisions only when requested, at their
+owning scope.
 
 ## Ground the direction
 
@@ -68,16 +69,17 @@ this surface:
 - The subject and its specific mechanism, content, or artifact.
 - Who encounters it, where, and what they need to understand or do.
 - The real assets, evidence, content ranges, and brand commitments available.
-- What remains open, what must stay, and what would make the result inappropriate.
+- What remains open, what must stay, and what would make the result
+  inappropriate.
 
 Different surfaces of one product can need different expression:
 
-| Visitor's purpose | Design emphasis |
-| --- | --- |
-| Decide and act: a campaign, pricing page, or launch | Clear proposition, credible evidence, attention, and a meaningful next action |
+| Visitor's purpose                                       | Design emphasis                                                                            |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| Decide and act: a campaign, pricing page, or launch     | Clear proposition, credible evidence, attention, and a meaningful next action              |
 | Complete work: an editor, dashboard, or settings screen | Scanability, predictable controls, density suited to the task; identity in precise details |
-| Understand: documentation, an article, or a guide | Reading rhythm, structure, useful wayfinding, and clarity |
-| Engage with the work: a portfolio or gallery | The artifact leads; the surrounding interface supports discovery |
+| Understand: documentation, an article, or a guide       | Reading rhythm, structure, useful wayfinding, and clarity                                  |
+| Engage with the work: a portfolio or gallery            | The artifact leads; the surrounding interface supports discovery                           |
 
 These are lenses for the surface, not agent modes or required labels. A tool's
 landing page and editor need not share the same composition or motion intensity.
@@ -88,10 +90,11 @@ Ask only for gaps that materially change the direction, scope, or asset needs.
 
 ## Make a proposal concrete
 
-For an open direction, bring a grounded recommendation and the closest meaningful
-alternative when one exists. Compare a real trade-off, such as artifact-led
-versus narrative-led composition, rather than recoloring the same template.
-Do not manufacture alternatives for a precise brief or settled local adjustment.
+For an open direction, bring a grounded recommendation and the closest
+meaningful alternative when one exists. Compare a real trade-off, such as
+artifact-led versus narrative-led composition, rather than recoloring the same
+template. Do not manufacture alternatives for a precise brief or settled local
+adjustment.
 
 Use the smallest useful description, sketch, or representative composition to
 make the proposal assessable. Address the choices that distinguish it:
@@ -99,14 +102,15 @@ make the proposal assessable. Address the choices that distinguish it:
 - **Composition:** what leads, the reading or exploration path, the focal point,
   and how sections or states relate. Let different content jobs earn different
   layouts; repeat a pattern when repetition makes comparison easier.
-- **Typography:** the character and role of the type, not just a font name.
-  Test long and short real headings; distinctive display type need not become
-  the face of small controls or body copy.
-- **Palette and materials:** what color temperature, contrast, surface treatment,
-  and depth express. Keep functional roles and legibility under UI guidance.
-- **Imagery:** what the media demonstrates, its source, crop, and missing assets.
-  Prefer product-specific material to interchangeable stock. Text-led work can
-  be complete when text carries the subject.
+- **Typography:** the character and role of the type, not just a font name. Test
+  long and short real headings; distinctive display type need not become the
+  face of small controls or body copy.
+- **Palette and materials:** what color temperature, contrast, surface
+  treatment, and depth express. Keep functional roles and legibility under UI
+  guidance.
+- **Imagery:** what the media demonstrates, its source, crop, and missing
+  assets. Prefer product-specific material to interchangeable stock. Text-led
+  work can be complete when text carries the subject.
 - **Motion:** what it communicates or lets the visitor experience. Choose
   expression independently of density and layout experimentation; an expressive
   composition can be still. Leave gesture behavior to UI guidance and mechanics
@@ -118,19 +122,20 @@ layout wholesale or reduce direction to labels such as "premium" or "modern."
 
 For example, a ceramics portfolio might lead with close-up material photography,
 quiet captions, and a spacious sequence that reveals a collection. A type
-specimen portfolio might lead with live text and a compact comparison grid.
-Both let the work lead; neither needs the other's imagery, density, or motion.
-The medium and browsing task explain the difference, not a universal hero rule.
+specimen portfolio might lead with live text and a compact comparison grid. Both
+let the work lead; neither needs the other's imagery, density, or motion. The
+medium and browsing task explain the difference, not a universal hero rule.
 
 State why the recommendation fits and its main cost: asset production, reading
 speed, implementation complexity, or loss of familiarity. Mark settled choices,
-tentative choices, and material open questions without imposing a phase template.
+tentative choices, and material open questions without imposing a phase
+template.
 
 A direction discussion does not authorize implementation. Do not write source,
 produce a full prototype, generate assets, or save a design note merely to make
 a proposal feel complete. When building is requested, carry the chosen direction
-through implementation and verification; do not ask the user to reconfirm routine
-details already specified.
+through implementation and verification; do not ask the user to reconfirm
+routine details already specified.
 
 ## Apply and critique the direction
 
@@ -165,10 +170,10 @@ recheck affected behavior. Stop when the brief and agreed direction hold; do not
 churn through variants or unrelated polish. If rendering is unavailable, report
 that limit and separate source findings from unverified visual judgments.
 
-For critique, connect each material concern to an observable element, its effect,
-and a concrete correction. Distinguish usability failures from aesthetic trade-offs.
-Do not score subjective taste as measured quality or treat an agent walkthrough
-as user research.
+For critique, connect each material concern to an observable element, its
+effect, and a concrete correction. Distinguish usability failures from aesthetic
+trade-offs. Do not score subjective taste as measured quality or treat an agent
+walkthrough as user research.
 
 ## Sources
 

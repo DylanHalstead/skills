@@ -13,9 +13,10 @@ commands run. Give the reviewer the intent and context that the diff cannot.
 Use the work and decisions already established in the current session. Do not
 reread the entire branch when that context is current and sufficient.
 
-Read the repository instructions and PR template before drafting. When a template
-has an explicit structure, preserve its headings, order, required markers, and
-checklists. Apply this skill within that structure instead of replacing it.
+Read the repository instructions and PR template before drafting. When a
+template has an explicit structure, preserve its headings, order, required
+markers, and checklists. Apply this skill within that structure instead of
+replacing it.
 
 Inspect Git or GitHub only to fill gaps or verify material claims. Read the full
 branch diff when the session did not produce the work, the scope is unclear or
@@ -69,11 +70,13 @@ narrating files or commits.
 
 Explain what was awkward, broken, risky, costly, or impossible before the
 change. Record why the chosen approach matters when a reasonable alternative
-exists. This is the highest-value section because the diff cannot recover intent.
+exists. This is the highest-value section because the diff cannot recover
+intent.
 
 ### Notes
 
-Include an item only when it changes how someone should assess or use the change:
+Include an item only when it changes how someone should assess or use the
+change:
 
 - a non-obvious implication, risk, tradeoff, or rejected alternative
 - migration, compatibility, rollout, or rollback constraints
@@ -117,8 +120,10 @@ that the author knows and the reviewer needs.
 
 Before publishing or updating the description, check:
 
-1. Can the reviewer understand the change's intent and scope before reading the diff?
+1. Can the reviewer understand the change's intent and scope before reading the
+   diff?
 2. Does every paragraph help the reviewer make a decision?
 3. Does the body describe the current branch rather than how it evolved?
-4. Are all issue links, risks, results, and behavior claims supported by evidence?
+4. Are all issue links, risks, results, and behavior claims supported by
+   evidence?
 5. Can anything be removed without losing intent or review-relevant context?

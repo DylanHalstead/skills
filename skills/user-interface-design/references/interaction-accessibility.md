@@ -7,8 +7,8 @@ routing, event handling, and framework APIs to implementation guidance.
 
 Use terms the intended audience understands rather than internal system names.
 Name actions by their outcome and carry that vocabulary through the flow:
-“Publish edition” leads to “Edition published”, not an unrelated “Success”.
-A generic label such as “Continue” is useful only when the next step is clear.
+“Publish edition” leads to “Edition published”, not an unrelated “Success”. A
+generic label such as “Continue” is useful only when the next step is clear.
 
 Explain failures with enough context to recover. Say what failed, whether the
 user's work remains, and what they can do next. For example, “Could not publish
@@ -36,8 +36,8 @@ to cognitive tests rather than requiring unaided recall or puzzle solving. Do
 not invent a new authentication mechanism as part of visual refinement.
 
 Distinguish hover, focus, active, disabled, and selected states. Necessary
-actions must remain discoverable without hover. Ensure focus is visible and
-not clipped or obscured. An icon-only control needs an accessible name.
+actions must remain discoverable without hover. Ensure focus is visible and not
+clipped or obscured. An icon-only control needs an accessible name.
 
 For composite widgets such as tabs or menus, follow the established component's
 keyboard contract. For modal dialogs, move focus into the dialog appropriately,
@@ -50,8 +50,8 @@ non-modal content.
 Distinguish actions that change data from navigation to another location.
 Preserve normal link behaviors, including opening a destination in another tab.
 
-Identify which view state users need to share, bookmark, reload, or revisit
-with Back and Forward. Specify the relevant filters, page, selection, and return
+Identify which view state users need to share, bookmark, reload, or revisit with
+Back and Forward. Specify the relevant filters, page, selection, and return
 position according to the task; do not require every transient state to persist.
 Keep private or sensitive data out of a shareable location.
 
@@ -82,11 +82,11 @@ risk, reversibility, and the opportunity to recover. Avoid both silent,
 irreversible loss and confirmation dialogs for every routine action.
 
 Loading, no records, no matching results, and permission failures are distinct
-states. Explain the state and offer an applicable next action. For partial success,
-keep completed work visible and make failed or pending portions identifiable;
-define whether retry affects only failed work. Do not present a mixed outcome
-as total success or erase usable content because one region failed. Retain usable
-cancellation for long operations where supported.
+states. Explain the state and offer an applicable next action. For partial
+success, keep completed work visible and make failed or pending portions
+identifiable; define whether retry affects only failed work. Do not present a
+mixed outcome as total success or erase usable content because one region
+failed. Retain usable cancellation for long operations where supported.
 
 ## Alternatives to gestures
 
@@ -107,15 +107,15 @@ around 100–150ms, simple transitions around 150–250ms; tune to context inste
 of enforcing a universal duration.
 
 Respect reduced-motion preference. Preserve the same state information without
-movement. Avoid flashing, compulsory parallax, and unrelated looping motion.
-Let users interrupt or reverse an animated interaction when its action allows
-that. Motion must not delay the next useful action. Specify the feedback and
+movement. Avoid flashing, compulsory parallax, and unrelated looping motion. Let
+users interrupt or reverse an animated interaction when its action allows that.
+Motion must not delay the next useful action. Specify the feedback and
 continuity needed rather than prescribing CSS properties or animation libraries.
 
 Give immediate visual press feedback while preserving normal activation and
 cancel behavior; feedback on press does not mean committing an action on press.
-During direct manipulation, keep the object aligned with the user's movement
-and preserve where it was grabbed. On release, continuity and momentum can help
+During direct manipulation, keep the object aligned with the user's movement and
+preserve where it was grabbed. On release, continuity and momentum can help
 explain where it settles; bounce is not required for an ordinary menu or button.
 An interrupted transition should continue from the visible position rather than
 jumping to its old target. Reversible panels should retain a coherent relation
@@ -126,26 +126,27 @@ reverse a panel transition without resubmitting its form or undoing a server
 write. Specify which controls remain available, including the non-gesture
 alternative. Translucency is optional; if used, preserve legibility over real
 backgrounds and provide a solid treatment when required by contrast or reduced
-transparency. Leave velocity calculation, spring parameters, and pointer handling
-to implementation guidance.
+transparency. Leave velocity calculation, spring parameters, and pointer
+handling to implementation guidance.
 
 ## Check beyond the screenshot
 
-- Measure foreground/background contrast: 4.5:1 normal text, 3:1 large text
-  (24 CSS px regular or about 18.67 CSS px bold). Use actual rendered colors,
+- Measure foreground/background contrast: 4.5:1 normal text, 3:1 large text (24
+  CSS px regular or about 18.67 CSS px bold). Use actual rendered colors,
   including transparency and background variation.
 - Check required cues identifying controls or states at 3:1 against adjacent
   colors. Add a non-color cue for meaning conveyed by color.
 - Navigate changed interactions with keyboard; verify order, focus visibility,
-  activation, gesture alternatives, and escape/recovery behavior where applicable.
-- Check applicable failure, retry, destructive-action, and return-to-view behavior
-  against the agreed recovery and navigation guarantees.
+  activation, gesture alternatives, and escape/recovery behavior where
+  applicable.
+- Check applicable failure, retry, destructive-action, and return-to-view
+  behavior against the agreed recovery and navigation guarantees.
 - Verify semantic headings, accessible names, form labels, errors, and dynamic
   feedback. Informative images need text alternatives; decorative images should
   not add screen-reader noise.
 - Test text resizing, zoom, narrow layouts, and long content for loss of
-  information or functionality. Dense UI still needs usable pointer targets.
-  For WCAG 2.2 AA, check the 24 CSS px target-size requirement or its permitted
+  information or functionality. Dense UI still needs usable pointer targets. For
+  WCAG 2.2 AA, check the 24 CSS px target-size requirement or its permitted
   spacing/other exceptions; larger targets can improve touch use.
 - Check supported themes and reduced-motion or forced-color modes when relevant.
   An automated checker can assist but cannot establish complete accessibility.
@@ -157,6 +158,6 @@ contrast, layout, or assistive-technology behavior.
 
 The direct-manipulation guidance adapts concepts from Emil Kowalski's
 [`apple-design` skill](https://github.com/emilkowalski/skills/blob/2d228630ba1446365f614a108cb8252f1feda202/skills/apple-design/SKILL.md),
-particularly press feedback, continuity, and interruptibility. These are optional
-background, not a requirement to use Apple aesthetics or any spring library.
-The [source license](../licenses/apple-design-MIT.txt) is retained.
+particularly press feedback, continuity, and interruptibility. These are
+optional background, not a requirement to use Apple aesthetics or any spring
+library. The [source license](../licenses/apple-design-MIT.txt) is retained.

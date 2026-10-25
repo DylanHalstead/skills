@@ -5,8 +5,8 @@ description: "Guides and evaluates software design using John Ousterhout's A Phi
 
 # Software design philosophy
 
-Use these criteria to judge material design decisions. Prefer changes that reduce
-the knowledge and coordination required for future work.
+Use these criteria to judge material design decisions. Prefer changes that
+reduce the knowledge and coordination required for future work.
 
 ## Complexity
 
@@ -47,8 +47,8 @@ Red flags:
 
 Give each design decision one owner. Hide formats, protocols, ordering,
 configuration rules, and storage details behind the module that owns them. If
-two modules must change together because they share hidden knowledge, merge
-the responsibility or create one module that owns that knowledge.
+two modules must change together because they share hidden knowledge, merge the
+responsibility or create one module that owns that knowledge.
 
 Design interfaces around the concept callers need, not the current
 implementation. Prefer the simplest somewhat-general interface that covers
@@ -66,10 +66,10 @@ Keep invariants close to the state they govern. Expose operations that preserve
 the invariant rather than mutable parts callers must coordinate correctly.
 
 For stateful behavior, make state transitions and the order of effects easy to
-follow. Separate computation from external effects when that clarifies the
-flow. Keep ordering-sensitive updates in the operation that owns the invariant,
-rather than across helpers callers must invoke in a remembered sequence.
-Do not split a cohesive operation merely to make each helper pure.
+follow. Separate computation from external effects when that clarifies the flow.
+Keep ordering-sensitive updates in the operation that owns the invariant, rather
+than across helpers callers must invoke in a remembered sequence. Do not split a
+cohesive operation merely to make each helper pure.
 
 ## Comments as design documentation
 
@@ -86,25 +86,25 @@ more complex design.
 ## Design process
 
 Scale design work to risk. For a new or changed boundary, sketch the caller's
-contract before choosing internals: inputs, guarantees, observable effects,
-and failure behavior. Clarify completion and resource ownership when relevant.
-Use a signature or a short interaction example; it need not become source
-comments or a saved document.
+contract before choosing internals: inputs, guarantees, observable effects, and
+failure behavior. Clarify completion and resource ownership when relevant. Use a
+signature or a short interaction example; it need not become source comments or
+a saved document.
 
 Before refining a material design, identify the assumption most likely to
-invalidate it. Check it with the smallest useful investigation: existing code,
-a focused test or experiment, or authoritative documentation. State any
-unverified assumption that affects the recommendation.
+invalidate it. Check it with the smallest useful investigation: existing code, a
+focused test or experiment, or authoritative documentation. State any unverified
+assumption that affects the recommendation.
 
-For a material boundary or abstraction, compare a second design built around
-a different constraint when a viable alternative exists. Judge how each option
+For a material boundary or abstraction, compare a second design built around a
+different constraint when a viable alternative exists. Judge how each option
 affects amplification, load, and unknown unknowns. If only one design is viable,
 explain which constraints eliminate the alternatives. For a local mechanical
 change, follow the established design without manufacturing alternatives.
 
-Prefer strategic improvements that reduce complexity inside the requested
-scope. Do not turn “leave it better” into unrelated cleanup. A broad structural
-problem belongs in a separate refactor.
+Prefer strategic improvements that reduce complexity inside the requested scope.
+Do not turn “leave it better” into unrelated cleanup. A broad structural problem
+belongs in a separate refactor.
 
 For a proposed design change, identify the current complexity, explain how the
 change reduces it, and state the main trade-off.
@@ -120,5 +120,5 @@ change reduces it, and state the main trade-off.
 7. Does the design reduce total complexity rather than move it elsewhere?
 
 Name a red flag only when you can show its concrete cost. Explain what must
-change together, what knowledge leaks, or what a caller must understand that
-the module should hide.
+change together, what knowledge leaks, or what a caller must understand that the
+module should hide.

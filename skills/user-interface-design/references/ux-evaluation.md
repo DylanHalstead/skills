@@ -1,8 +1,8 @@
 # UX evaluation
 
-Review the requested experience against a concrete task and the intended
-user's knowledge and constraints. Diagnose usability separately from visual
-preference. Do not turn a focused review into a product-wide audit.
+Review the requested experience against a concrete task and the intended user's
+knowledge and constraints. Diagnose usability separately from visual preference.
+Do not turn a focused review into a product-wide audit.
 
 ## Establish the evidence
 
@@ -18,8 +18,8 @@ paths. Match claims to the evidence available:
   freshness. It does not establish other viewports, keyboard behavior, dynamic
   states, timing, or measured contrast.
 - **Runnable interface:** also inspect the relevant flows, changed interactions,
-  and states. Measure contrast and test keyboard or assistive-technology behavior
-  before claiming those checks passed.
+  and states. Measure contrast and test keyboard or assistive-technology
+  behavior before claiming those checks passed.
 
 None of these substitutes for participant evidence about actual user behavior.
 If a check is unavailable, report the specific limit rather than discarding
@@ -28,8 +28,8 @@ observations supported by the evidence you do have.
 State the task and success condition before reviewing. Use supplied research,
 support reports, or analytics when available. Personas can help form questions,
 but invented personas and simulated walkthroughs do not establish how real
-people behave. Do not estimate task completion rates or satisfaction scores
-from expert judgment.
+people behave. Do not estimate task completion rates or satisfaction scores from
+expert judgment.
 
 ## Walk the task
 
@@ -43,14 +43,16 @@ At each meaningful step, ask:
 4. **Feedback:** after acting, can they tell what changed and what to do next?
 
 Check the actual control, wording, state, and path behind a concern. A "no" is
-an investigation lead, not automatic proof that users abandon the task. Distinguish
-an observed blocker from a plausible hesitation that needs participant evidence.
+an investigation lead, not automatic proof that users abandon the task.
+Distinguish an observed blocker from a plausible hesitation that needs
+participant evidence.
 
 For example, a successful upload followed by an unchanged screen may leave the
-user unsure whether retrying will create a duplicate. Inspect the success feedback
-and resulting file location. Recommend making the outcome clear; do not claim a
-measured abandonment rate. An expert batch tool may intentionally use quieter
-feedback than a first-use upload flow while still making status discoverable.
+user unsure whether retrying will create a duplicate. Inspect the success
+feedback and resulting file location. Recommend making the outcome clear; do not
+claim a measured abandonment rate. An expert batch tool may intentionally use
+quieter feedback than a first-use upload flow while still making status
+discoverable.
 
 ## Check relevant usability principles
 
@@ -68,9 +70,9 @@ Use these to investigate gaps, not to require a full report on every category:
 - Help where the task actually requires explanation.
 
 Use this skill's owning references for detailed navigation, controls, recovery,
-accessibility, and visual hierarchy. Use `visual-design` only when the review also
-questions the visual direction or expressive composition; a task walkthrough
-need not reopen the brand.
+accessibility, and visual hierarchy. Use `visual-design` only when the review
+also questions the visual direction or expressive composition; a task
+walkthrough need not reopen the brand.
 
 ## Report actionable findings
 
@@ -86,11 +88,12 @@ recoverable friction and polish. Consider task importance and reach, not just
 how visible a defect looks. Group findings that share one cause. Include useful
 existing behavior when it constrains the fix; do not invent praise or quotas.
 
-Do not add heuristic verdicts into an overall score. Separate unmet requirements,
-observed defects, usability hypotheses, and aesthetic trade-offs. Flag hidden
-costs, fabricated proof, misleading consent, or obstructed cancellation through
-the specific behavior; determine legal requirements from current authoritative
-sources rather than treating an anti-pattern label as a legal conclusion.
+Do not add heuristic verdicts into an overall score. Separate unmet
+requirements, observed defects, usability hypotheses, and aesthetic trade-offs.
+Flag hidden costs, fabricated proof, misleading consent, or obstructed
+cancellation through the specific behavior; determine legal requirements from
+current authoritative sources rather than treating an anti-pattern label as a
+legal conclusion.
 
 Recommend the smallest correction and its verification. Review does not itself
 authorize fixes or saved reports. When implementation is requested, recheck the
@@ -99,7 +102,8 @@ scope instead of routing through a mandatory chain of specialist reviews.
 
 ## Background
 
-Optional conceptual source: Intent's [`evaluate` skill](https://github.com/ghaida/intent/blob/3fc38dff381ce0e4dec8f52c97c3e37abd95e10e/skills/evaluate/SKILL.md)
+Optional conceptual source: Intent's
+[`evaluate` skill](https://github.com/ghaida/intent/blob/3fc38dff381ce0e4dec8f52c97c3e37abd95e10e/skills/evaluate/SKILL.md)
 (CC0-1.0), especially cognitive walkthroughs and evidence-linked findings. This
 reference does not adopt Intent's agent routing, estimated metrics, or required
 report structure.

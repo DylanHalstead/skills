@@ -5,8 +5,8 @@ description: "Investigate and distill context into clear bugs, feature requests,
 
 # Issue authoring
 
-Write for the person picking up the work. Explain what needs to change, why,
-and anything they cannot safely infer. Apply these preferences across trackers
+Write for the person picking up the work. Explain what needs to change, why, and
+anything they cannot safely infer. Apply these preferences across trackers
 unless the user requests otherwise or a project requires a specific format.
 
 ## Establish the work
@@ -32,8 +32,8 @@ Less is more. Use headings only when they help the reader follow the content.
 Cut repetition, generic engineering advice, and sections that add ceremony.
 Leave routine implementation choices to the person doing the work. Select the
 details each ticket needs rather than transcribing all the source notes. Put
-shared context at the project or milestone level; repeat it only where needed
-to understand or safely carry out a ticket.
+shared context at the project or milestone level; repeat it only where needed to
+understand or safely carry out a ticket.
 
 Keep necessary contracts, existing behavior to preserve, and concrete risks or
 rollout constraints. Keep each constraint scoped to the operation it applies to.
@@ -45,20 +45,20 @@ Use plain language and active verbs. Avoid decorative formatting and sentences
 that merely introduce or summarize the surrounding text.
 
 Use established context and read existing material before changing it. Preserve
-useful decisions and links. Link shared context rather than copying it into every
-ticket, while keeping each ticket's requested change understandable.
+useful decisions and links. Link shared context rather than copying it into
+every ticket, while keeping each ticket's requested change understandable.
 
 ## Organization
 
 Use the smallest useful set of tickets. Keep work together when it can ship as
-one change; separate implementation steps alone do not justify a split. Split
-at independent deliverables or necessary deployment boundaries, and preserve
-those prerequisites in the blocking relations.
+one change; separate implementation steps alone do not justify a split. Split at
+independent deliverables or necessary deployment boundaries, and preserve those
+prerequisites in the blocking relations.
 
 Prefer standalone tickets over subtasks or umbrella parents. Use blocking
 relations for real dependencies and related links for context. State additional
-conditions, such as deployment or verification, when a relation alone is unclear.
+conditions, such as deployment or verification, when a relation alone is
+unclear.
 
-Group tickets when they share a meaningful outcome.
-Describe that outcome briefly; leave task details in the tickets.
-
+Group tickets when they share a meaningful outcome. Describe that outcome
+briefly; leave task details in the tickets.

@@ -8,10 +8,10 @@ needs a place.
 ## Establish the information space
 
 Inspect representative content, existing navigation, labels, and available
-search logs, support reports, or user research. Identify the primary tasks,
-user vocabulary, content types, permissions, and likely growth. Distinguish
-observed behavior from a proposed mental model; internal categories are not
-proof that users think the same way.
+search logs, support reports, or user research. Identify the primary tasks, user
+vocabulary, content types, permissions, and likely growth. Distinguish observed
+behavior from a proposed mental model; internal categories are not proof that
+users think the same way.
 
 For a material navigation change, show where existing destinations move and
 which labels or paths change. Preserve URLs, bookmarks, and tracking contracts
@@ -19,13 +19,13 @@ unless their change is in scope; routing mechanics belong to implementation.
 
 ## Choose structure from the task
 
-| Structure | Useful when | Main trade-off |
-| --- | --- | --- |
-| Hierarchy | Content has meaningful parent-child relationships | Deep nesting or overlapping categories makes destinations hard to predict |
-| Flat collection | Similar records can be scanned, searched, or filtered | Diverse content needs stronger grouping and discovery aids |
-| Hub and spoke | Tasks are distinct and users usually finish one before switching | Cross-task work becomes awkward if every move returns through the hub |
-| Faceted collection | Users combine independent attributes to narrow many records | Vocabulary, filter interaction, and no-results recovery become part of navigation |
-| Sequential flow | Later steps genuinely depend on earlier decisions | Unnecessary sequencing slows repeat users and makes revisiting choices harder |
+| Structure          | Useful when                                                      | Main trade-off                                                                    |
+| ------------------ | ---------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| Hierarchy          | Content has meaningful parent-child relationships                | Deep nesting or overlapping categories makes destinations hard to predict         |
+| Flat collection    | Similar records can be scanned, searched, or filtered            | Diverse content needs stronger grouping and discovery aids                        |
+| Hub and spoke      | Tasks are distinct and users usually finish one before switching | Cross-task work becomes awkward if every move returns through the hub             |
+| Faceted collection | Users combine independent attributes to narrow many records      | Vocabulary, filter interaction, and no-results recovery become part of navigation |
+| Sequential flow    | Later steps genuinely depend on earlier decisions                | Unnecessary sequencing slows repeat users and makes revisiting choices harder     |
 
 Use global navigation for stable product areas and local navigation for the
 current area. An overview dashboard can summarize and link to tasks, but need
@@ -38,22 +38,24 @@ Group by the user's content or task, not automatically by database tables or
 team ownership. Check ambiguous items against representative examples. If an
 item legitimately belongs in multiple categories, use cross-links, facets, or
 multiple appearances backed by one authoritative record rather than duplicating
-its data. Avoid a growing "Other" category that conceals a broken classification.
+its data. Avoid a growing "Other" category that conceals a broken
+classification.
 
 Labels should predict what users will find or do. Prefer their vocabulary;
 retain established terms when changing them would create confusion. Test a label
 by showing its contents and asking whether the destination is predictable, not
 by judging whether the word sounds modern.
 
-For example, a documentation topic may serve both a beginner's task guide and
-an expert's API lookup. Cross-link the same topic from both paths; do not force
+For example, a documentation topic may serve both a beginner's task guide and an
+expert's API lookup. Cross-link the same topic from both paths; do not force
 both audiences through one sequence or maintain two conflicting copies. A small
 settings panel may need only clear groups and labels, not a search system.
 
 ## Support different finding behaviors
 
 - **Known item:** a precise destination, direct link, or search result.
-- **Explore:** meaningful categories, previews, and filters that reveal what exists.
+- **Explore:** meaningful categories, previews, and filters that reveal what
+  exists.
 - **Return:** relevant history, saved items, stable links, or restoration of the
   agreed view state. Do not persist everything merely to support re-finding.
 - **Unfamiliar domain:** plain-language entry points and examples; search alone
@@ -83,12 +85,15 @@ sample size does not guarantee validity. An agent walkthrough is an expert
 hypothesis, not participant research. If evidence is unavailable, present the
 structure as a proposal and name what would confirm or challenge it.
 
-For a design discussion, return the relevant hierarchy or paths, label decisions,
-main trade-off, and material uncertainty. A sitemap, taxonomy document, or saved
-research plan is not required unless the request needs that artifact.
+For a design discussion, return the relevant hierarchy or paths, label
+decisions, main trade-off, and material uncertainty. A sitemap, taxonomy
+document, or saved research plan is not required unless the request needs that
+artifact.
 
 ## Background
 
-Optional conceptual source: Intent's [information-architecture reference](https://github.com/ghaida/intent/blob/3fc38dff381ce0e4dec8f52c97c3e37abd95e10e/skills/intent/references/information-architecture.md)
-and [`organize` skill](https://github.com/ghaida/intent/blob/3fc38dff381ce0e4dec8f52c97c3e37abd95e10e/skills/organize/SKILL.md)
+Optional conceptual source: Intent's
+[information-architecture reference](https://github.com/ghaida/intent/blob/3fc38dff381ce0e4dec8f52c97c3e37abd95e10e/skills/intent/references/information-architecture.md)
+and
+[`organize` skill](https://github.com/ghaida/intent/blob/3fc38dff381ce0e4dec8f52c97c3e37abd95e10e/skills/organize/SKILL.md)
 (CC0-1.0). The guidance here does not depend on Intent's routing or tools.

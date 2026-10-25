@@ -17,20 +17,20 @@ Do not add a chart simply because a dashboard has space for one.
 ## Make comparisons honest
 
 Start magnitude-encoding bar axes at zero. For lines or scatter plots, use an
-appropriate scale for the question and make any restricted range explicit.
-Keep scales comparable across related panels; do not exaggerate small changes.
+appropriate scale for the question and make any restricted range explicit. Keep
+scales comparable across related panels; do not exaggerate small changes.
 
 Label axes, units, time ranges, and series. Use consistent numeric precision.
-Highlight the relevant series while keeping others readable. Annotate events
-or thresholds only when they help explain the data.
+Highlight the relevant series while keeping others readable. Annotate events or
+thresholds only when they help explain the data.
 
 For categories, choose distinguishable colors with labels or patterns. For
 ordered magnitude, use a coherent sequential range; for deviations around a
 meaningful center, use a diverging range. Do not assume red/green alone makes
 positive and negative values understandable.
 
-Provide an accessible summary and a data-table alternative when needed.
-Hover tooltips must not be the only way to obtain essential values.
+Provide an accessible summary and a data-table alternative when needed. Hover
+tooltips must not be the only way to obtain essential values.
 
 ## Compose tables and dashboards around the task
 
@@ -45,8 +45,8 @@ keyboard-operable.
 
 Increase visible records by removing redundant columns, combining related
 unsortable information, and tightening row padding before reducing legibility.
-Keep columns separate when comparison, sorting, or export depends on them.
-Use restrained separators or alternating backgrounds when they clarify rows;
+Keep columns separate when comparison, sorting, or export depends on them. Use
+restrained separators or alternating backgrounds when they clarify rows;
 preserve generous separation between unrelated dashboard regions.
 
 Design no-data, no-results, loading, and error states. Test representative long

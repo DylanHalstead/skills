@@ -8,16 +8,46 @@ This repository owns the custom skill sources. The complete personal collection,
 including third-party skills and their pinned revisions, is in the
 [dotfiles skill lock](https://github.com/DylanHalstead/dotfiles/blob/main/skills-lock.json).
 
+## Formatting
+
+Install dprint and Lefthook at the versions in `.tool-versions` using mise or
+asdf, then enable the Git hook:
+
+```sh
+lefthook install
+```
+
+Run `dprint fmt` to format Markdown or `dprint check` to check it without
+changes. The Markdown plugin is pinned in `dprint.json`; it wraps prose at 80
+columns. No code-language plugins are enabled, so embedded examples are not
+reformatted. The pre-commit hook checks staged Markdown files without modifying
+or staging them. No Node.js runtime, package manager, or task runner is needed.
+
 ## Skills
 
-- [domain-driven-design](skills/domain-driven-design/SKILL.md): Model business rules, identity, and consistency boundaries.
-- [engineering-standard](skills/engineering-standard/SKILL.md): Follow repository conventions and review changes with evidence.
-- [frontend-development](skills/frontend-development/SKILL.md): Build frontend features with clear state ownership, component composition, loading behavior, styling, and browser resource lifetimes.
-- [go-development](skills/go-development/SKILL.md): Write, test, review, and debug idiomatic Go code.
-- [issue-authoring](skills/issue-authoring/SKILL.md): Investigate and distill context into concise issues with verifiable outcomes, milestones, and dependencies across trackers.
-- [pr-description](skills/pr-description/SKILL.md): Write pull request titles and descriptions.
-- [ruby-development](skills/ruby-development/SKILL.md): Write, test, review, and debug Ruby, with conditional Rails guidance.
-- [skill-creator](skills/skill-creator/SKILL.md): Create, refine, and validate skills.
-- [software-design-philosophy](skills/software-design-philosophy/SKILL.md): Apply A Philosophy of Software Design to modules, interfaces, and complexity.
-- [user-interface-design](skills/user-interface-design/SKILL.md): Design usable interfaces, navigation, interaction, and accessibility within the agreed visual direction.
-- [visual-design](skills/visual-design/SKILL.md): Develop, compare, apply, and critique visual direction grounded in the subject, audience, and project intent.
+- [domain-driven-design](skills/domain-driven-design/SKILL.md): Model business
+  rules, identity, and consistency boundaries.
+- [engineering-standard](skills/engineering-standard/SKILL.md): Follow
+  repository conventions and review changes with evidence.
+- [frontend-development](skills/frontend-development/SKILL.md): Build frontend
+  features with clear state ownership, component composition, loading behavior,
+  styling, and browser resource lifetimes.
+- [go-development](skills/go-development/SKILL.md): Write, test, review, and
+  debug idiomatic Go code.
+- [issue-authoring](skills/issue-authoring/SKILL.md): Investigate and distill
+  context into concise issues with verifiable outcomes, milestones, and
+  dependencies across trackers.
+- [pr-description](skills/pr-description/SKILL.md): Write pull request titles
+  and descriptions.
+- [ruby-development](skills/ruby-development/SKILL.md): Write, test, review, and
+  debug Ruby, with conditional Rails guidance.
+- [skill-creator](skills/skill-creator/SKILL.md): Create, refine, and validate
+  skills.
+- [software-design-philosophy](skills/software-design-philosophy/SKILL.md):
+  Apply A Philosophy of Software Design to modules, interfaces, and complexity.
+- [user-interface-design](skills/user-interface-design/SKILL.md): Design usable
+  interfaces, navigation, interaction, and accessibility within the agreed
+  visual direction.
+- [visual-design](skills/visual-design/SKILL.md): Develop, compare, apply, and
+  critique visual direction grounded in the subject, audience, and project
+  intent.

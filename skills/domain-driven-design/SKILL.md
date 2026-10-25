@@ -34,9 +34,9 @@ model made only of getters and setters scatters rules across callers.
   atomically. Let one root enforce its invariants.
 
 Keep aggregates small. Reference other aggregates by ID rather than object
-reference. Keep an aggregate's invariants within its atomic consistency boundary.
-Choose consistency across aggregates from the business requirements; use eventual
-consistency only when delayed updates are acceptable.
+reference. Keep an aggregate's invariants within its atomic consistency
+boundary. Choose consistency across aggregates from the business requirements;
+use eventual consistency only when delayed updates are acceptable.
 
 ## Bound contexts
 
@@ -60,14 +60,14 @@ boundary.
 
 Keep callers from coordinating persistence details. Follow the repository's
 model architecture; introduce a separate repository or adapter when it hides
-meaningful storage complexity or supports a required substitution boundary.
-Add a factory only when it hides real construction complexity.
+meaningful storage complexity or supports a required substitution boundary. Add
+a factory only when it hides real construction complexity.
 
 ## Invest selectively
 
 Identify the core domain that differentiates the product. Invest deep modeling
-there. Keep supporting domains simple and buy or reuse generic capabilities
-such as authentication, email, and payments when practical.
+there. Keep supporting domains simple and buy or reuse generic capabilities such
+as authentication, email, and payments when practical.
 
 ## Design questions
 
