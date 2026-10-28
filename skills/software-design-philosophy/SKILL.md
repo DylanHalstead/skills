@@ -31,6 +31,14 @@ cases, defaults, and invariants rather than making every caller repeat them.
 Different layers should expose different abstractions. A layer that only
 forwards calls has not earned its boundary.
 
+Before extracting a module, compare it with keeping the operation and its
+private helpers together. Identify the knowledge, invariant, or substantial
+implementation complexity the new boundary would hide, and account for the
+navigation it adds. Multiple responsibilities or a long file alone do not
+establish the need for another module. Consider collapsing existing boundaries
+that only redistribute a cohesive operation without reducing what readers must
+understand.
+
 Red flags:
 
 - shallow modules and pass-through methods
