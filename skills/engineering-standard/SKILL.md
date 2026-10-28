@@ -81,8 +81,11 @@ complexity, or removes duplication callers would otherwise get wrong. Prefer a
 simple interface over a simple implementation and keep side effects visible in
 names and orchestration.
 
-Comments preserve non-obvious contracts and rationale for a reader without this
-conversation. Keep detailed design and comment criteria in the design skill.
+Before finalizing, check new code, tests, and prose against the supported
+contract, not just the motivating example or investigation. Preserve relevant
+regression cases and non-obvious rationale; omit rejected hypotheses and
+incidental history. Put operational instructions in their owning documentation.
+Detailed comment criteria belong to the design skill.
 
 ## Quality bars
 
@@ -102,6 +105,11 @@ Hold changed code to all four. When they conflict, state the trade-off.
   for accidental quadratic scans, unbounded caches and buffers, N+1 queries,
   missing pagination or backpressure, and unsafe shared state.
 
+Name values for their concepts; distinguish representations when they coexist.
+Use domain terms in orchestration and precise platform terms at infrastructure
+boundaries. Add qualifiers only to resolve ambiguity in the current scope. If a
+name needs its producer to explain it, consider making it more specific.
+
 Performance claims need evidence. Point to a round trip, allocation, scan, lock,
 or measurement. Do not sacrifice clarity for an unmeasured hot path. Trace the
 complete operation: work before batching, serialized queue arguments,
@@ -117,10 +125,17 @@ that evidence.
 
 ## Review findings
 
-Report a concern only when you can show a reachable failure, violated
-requirement, regression, or material risk. State the relevant code path and the
-evidence that supports the claim. Keep honest uncertainty visible: identify what
-runtime value, test, or contract would confirm a plausible concern.
+Report a defect or material-risk concern only when you can show a reachable
+failure, violated requirement, regression, or material risk. State the relevant
+code path and the evidence that supports the claim. Keep honest uncertainty
+visible: identify what runtime value, test, or contract would confirm a
+plausible concern.
+
+Distinguish defects from maintainability suggestions. A non-blocking suggestion
+can be supported by a specific ambiguity, information leak, or navigation burden
+without demonstrating a runtime failure. Explain what the reader must infer or
+trace and how the proposed change reduces that work; preference alone is not
+evidence.
 
 After verifying findings, check whether several share one root cause. Merge them
 when one coordinated change would fix them; otherwise, keep them separate. Do
