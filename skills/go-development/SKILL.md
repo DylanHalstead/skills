@@ -12,6 +12,12 @@ toolchain, before choosing language features or APIs.
 ## Go conventions
 
 - Use `gofmt`; use `goimports` and import grouping configured by the repository.
+- Group statements by logical operation, using blank lines between operations.
+  Keep an operation and its error handling together. Prefer spacing over
+  extracting helpers merely to break up dense code.
+- Put package-level type declarations before functions. Arrange entrypoints and
+  primary operations before supporting helpers where practical, so readers can
+  follow the main flow before implementation details.
 - Name packages for what they provide; avoid catch-all packages and name
   stutter. Keep initialisms (`userID`, `httpClient`) and receiver names
   consistent.
@@ -90,6 +96,11 @@ rather than forcing them into a table. Cover relevant boundaries and error
 paths; test results and required side effects, not private calls. Use fresh
 dependencies per subtest and `t.Cleanup` for owned resources. Parallelize only
 isolated tests.
+
+Name subtests for behavior or input conditions, not incidental properties such
+as payload length. Separate prerequisite checks from value assertions, and split
+compound assertions when their failure messages would not identify what
+differed.
 
 ## References and checks
 
