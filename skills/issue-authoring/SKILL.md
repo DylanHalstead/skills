@@ -24,9 +24,13 @@ change the work; leave routine implementation choices to the implementer.
 
 ## Writing
 
-Use an action-oriented title. Start the description with the change and its
-reason; a short paragraph is often enough. Add bullets for distinct requirements
-and examples or code when exact behavior matters.
+Use an action-oriented title. Start the description with the system or workflow
+that owns the behavior, what it does today, and the requested change and reason.
+Put context needed to understand the task before implementation details or
+references. For operational tasks, identify the affected population and intended
+outcome. Include only the setup the reader needs; do not force every issue into
+a fixed template. A short paragraph is often enough. Add bullets for distinct
+requirements and examples or code when exact behavior matters.
 
 Less is more. Use headings only when they help the reader follow the content.
 Cut repetition, generic engineering advice, and sections that add ceremony.
