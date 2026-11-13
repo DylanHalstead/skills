@@ -2,6 +2,13 @@
 
 Check the installed Rails and job-library versions before relying on an API.
 
+## Loading code
+
+Rails autoloads application constants, and Bundler requires the gems in the
+`Gemfile`. Do not add `require` or `require_relative` for either. Specs for code
+that depends on Rails should load the repository's Rails helper, usually
+`rails_helper`, rather than requiring application files directly.
+
 ## Model behavior and capabilities
 
 A Rails model can be an ordinary Ruby class; inherit from Active Record when the

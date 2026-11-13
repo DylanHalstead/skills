@@ -32,9 +32,22 @@ not load it for plain Ruby scripts or libraries that do not use Rails.
 - Safe navigation handles a `nil` receiver, not invalid input or a missing
   method on a non-nil object. Do not convert a broken required relationship into
   an unexplained nil result.
+- Rely on duck typing for objects your own code passes in. Skip `is_a?`
+  assertions and type or blank checks on internal arguments; a wrong object
+  fails on first use, and tests protect the contract. Validate where untrusted
+  data enters: user input, uploads, and external payloads you persist or branch
+  on. Do not re-check what Ruby already enforces: required keywords raise when
+  omitted, and `ENV.fetch` raises for a missing variable.
 - Preserve the owning method's failure contract: a boolean result, a value, or
   an exception are different interfaces. Rescue errors you can handle at that
   boundary; do not turn a failed write or external operation into success.
+- When designing a new failure contract, start from the callers. Do not return
+  `nil` for a failed or empty lookup. Return an empty value, or a result object
+  such as a `Data` with `status`, `body`, and `success?`, when callers branch or
+  degrade. Raise when the usual caller should stop, such as a retrying job.
+  Every custom exception class adds a rescue obligation, so add one only when a
+  caller handles it differently. Include the offending input in errors that
+  someone will investigate.
 - Check mutation and object ownership before using bang methods or sharing
   arrays/hashes. A method's `!` suffix signals a more dangerous counterpart, not
   one universal guarantee about mutation or exceptions.
@@ -48,8 +61,9 @@ fits genuinely variable keys. Use an ordinary class when construction,
 invariants, behavior, or lifecycle need an explicit interface.
 
 `Data` freezes the instance, not nested strings, arrays, or hashes, and does not
-validate member types. Copy or freeze nested values when the ownership contract
-requires it. Translate external keys, units, and representations at the owning
+validate member types. Ruby code normally shares argument objects; copy or
+freeze a nested value only when the object keeps one that callers are known to
+mutate later. Translate external keys, units, and representations at the owning
 boundary so callers work with the application's concepts.
 
 ## Verification
