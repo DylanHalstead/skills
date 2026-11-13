@@ -85,7 +85,9 @@ Before finalizing, check new code, tests, and prose against the supported
 contract, not just the motivating example or investigation. Preserve relevant
 regression cases and non-obvious rationale; omit rejected hypotheses and
 incidental history. Put operational instructions in their owning documentation.
-Detailed comment criteria belong to the design skill.
+Detailed comment criteria belong to the design skill. Test the contract the code
+owns, not guarantees the language or framework already provides, such as value
+equality, immutability, or missing-argument errors.
 
 ## Quality bars
 
