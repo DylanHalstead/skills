@@ -81,10 +81,16 @@ cohesive operation merely to make each helper pure.
 
 ## Comments as design documentation
 
+Write no comment by default. Add one only when a reader would otherwise misuse
+the code, change it unsafely, or need to trace other code to understand it.
+
 Interface comments tell callers what they cannot learn from the signature:
 contracts, guarantees, side effects, units, ordering, limits, and edge cases.
-Implementation comments explain rationale, invariants, assumptions, and
-non-obvious trade-offs. Do not restate code.
+Lead with the abstraction, what a caller gets, before input rules and edge
+cases; describe behavior, not the implementation or guarantees it lacks.
+Implementation comments explain why: rationale, invariants, assumptions, and
+non-obvious trade-offs. Do not restate code. Check that each comment holds on
+every path it describes.
 
 A comment must make sense to a future reader with no task, review, or plan
 context. Record the code-level reason itself. When choosing a deliberate
